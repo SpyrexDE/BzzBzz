@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://wt5tsi27by3d"]
+
+[ext_resource type="Texture2D" uid="uid://selfvw58jxul" path="res://props/pole/concretepole.png" id="1_ycc21"]
+
+[node name="Pole" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_ycc21")
