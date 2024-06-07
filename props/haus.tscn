@@ -1,13 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cswjddao7c7gd"]
+[gd_scene load_steps=7 format=3 uid="uid://cswjddao7c7gd"]
 
 [ext_resource type="Script" path="res://props/haus.gd" id="1_10jd8"]
-[ext_resource type="Texture2D" uid="uid://o8o4yx0b61bx" path="res://icon.svg" id="1_qofik"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_r6iq1"]
-size = Vector2(129, 129)
+[ext_resource type="Texture2D" uid="uid://bc7pl5rp5037s" path="res://Haus1.png" id="2_fohcu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_eg6st"]
-radius = 138.033
+radius = 401.125
 
 [sub_resource type="Animation" id="Animation_rlhes"]
 length = 0.001
@@ -49,16 +46,16 @@ _data = {
 script = ExtResource("1_10jd8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_qofik")
+texture = ExtResource("2_fohcu")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(3.8147e-06, -7.62939e-06)
 energy = 0.0
-texture = ExtResource("1_qofik")
+texture = ExtResource("2_fohcu")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 0.5)
-shape = SubResource("RectangleShape2D_r6iq1")
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(66.75, -13.75)
+polygon = PackedVector2Array(-83.75, 29.75, -85.75, -178.25, 86.25, -176.25, 84.25, 185.75, -85.75, 189.75, -217.75, 153.75, -221.75, 25.75)
 
 [node name="Area2D" type="Area2D" parent="."]
 
