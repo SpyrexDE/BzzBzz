@@ -1,3 +1,11 @@
-[gd_scene format=3 uid="uid://ybf3jv7g5s6b"]
+[gd_scene load_steps=3 format=3 uid="uid://ybf3jv7g5s6b"]
+
+[ext_resource type="PackedScene" uid="uid://b1gg5e8kp4384" path="res://robot/robot.tscn" id="1_qiamr"]
+[ext_resource type="PackedScene" uid="uid://cswjddao7c7gd" path="res://props/haus.tscn" id="2_lykm4"]
 
 [node name="TestLevel2" type="Node2D"]
+
+[node name="Robot" parent="." instance=ExtResource("1_qiamr")]
+position = Vector2(531, 296)
+
+[node name="Haus" parent="." instance=ExtResource("2_lykm4")]
