@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dd4pjpgedovfg"]
+
+[ext_resource type="Script" path="res://props/Hinderniss_Wasser/wasser_teich.gd" id="1_7gu2o"]
+[ext_resource type="Texture2D" uid="uid://byoksq6pgdppg" path="res://Hinderniss_Wasser.png" id="1_h2xk1"]
+
+[node name="Wasser_Teich" type="StaticBody2D"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_7gu2o")
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-128, -90, -99, -111, -26, -83, 42, -57, 141, -59, 150, -32, 144, 19, 46, 121, -63, 113, -156, 52, -159, -47)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_h2xk1")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-128, -90, -99, -111, -26, -83, 42, -57, 141, -59, 150, -32, 144, 19, 46, 121, -63, 113, -156, 52, -159, -47)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
