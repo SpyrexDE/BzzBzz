@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dahxw88ts6t6k"]
+[gd_scene load_steps=4 format=3 uid="uid://dahxw88ts6t6k"]
 
 [ext_resource type="PackedScene" uid="uid://b1gg5e8kp4384" path="res://robot/robot.tscn" id="1_vcimh"]
 [ext_resource type="PackedScene" uid="uid://cswjddao7c7gd" path="res://props/haus.tscn" id="2_qns4n"]
+[ext_resource type="PackedScene" uid="uid://desc5w62oyqfi" path="res://props/connector/connector.tscn" id="3_pgg6y"]
 
 [node name="Testlvl1" type="Node2D"]
 
@@ -11,3 +12,5 @@ position = Vector2(151, 231)
 
 [node name="Haus" parent="." instance=ExtResource("2_qns4n")]
 position = Vector2(584, 303)
+
+[node name="Connector" parent="." instance=ExtResource("3_pgg6y")]
