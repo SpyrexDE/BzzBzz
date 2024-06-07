@@ -15,6 +15,14 @@ run/main_scene="res://levels/testlvl1.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Globals="*res://global/globals.gd"
+
+[display]
+
+window/stretch/mode="canvas_items"
+
 [input]
 
 steer_left={
