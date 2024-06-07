@@ -6,6 +6,3 @@
 
 [node name="Robot" parent="." instance=ExtResource("1_vcimh")]
 position = Vector2(151, 231)
-speed = null
-friction = null
-steering_speed = null
