@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dalopp2ns8t8d"]
+
+[ext_resource type="Script" path="res://robot/player_camera.gd" id="1_hym4d"]
+
+[node name="PlayerCamera" type="Node"]
+script = ExtResource("1_hym4d")
+
+[node name="Cam" type="Camera2D" parent="."]
+unique_name_in_owner = true
+zoom = Vector2(0.2, 0.2)
