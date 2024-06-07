@@ -14,5 +14,7 @@ func _process(delta):
 
 
 func _on_area_2d_body_entered(body):
-	print("hi")
+	if body is Player:
+		print("hi")
+		$AnimationPlayer.play("haus_light_up")
 	pass # Replace with function body.

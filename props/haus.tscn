@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cswjddao7c7gd"]
+[gd_scene load_steps=8 format=3 uid="uid://cswjddao7c7gd"]
 
 [ext_resource type="Script" path="res://props/haus.gd" id="1_10jd8"]
 [ext_resource type="Texture2D" uid="uid://o8o4yx0b61bx" path="res://icon.svg" id="1_qofik"]
@@ -9,6 +9,42 @@ size = Vector2(129, 129)
 [sub_resource type="CircleShape2D" id="CircleShape2D_eg6st"]
 radius = 138.033
 
+[sub_resource type="Animation" id="Animation_rlhes"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PointLight2D:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_y5flh"]
+resource_name = "haus_light_up"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PointLight2D:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [0.0, 0.94]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eedoo"]
+_data = {
+"RESET": SubResource("Animation_rlhes"),
+"haus_light_up": SubResource("Animation_y5flh")
+}
+
 [node name="Haus" type="StaticBody2D"]
 script = ExtResource("1_10jd8")
 
@@ -17,7 +53,7 @@ texture = ExtResource("1_qofik")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(3.8147e-06, -7.62939e-06)
-scale = Vector2(1, 1)
+energy = 0.0
 texture = ExtResource("1_qofik")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -28,5 +64,10 @@ shape = SubResource("RectangleShape2D_r6iq1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_eg6st")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_eedoo")
+}
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
