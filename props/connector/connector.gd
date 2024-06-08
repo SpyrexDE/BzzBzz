@@ -46,9 +46,6 @@ func add_checkpoint(new_checkpoint: Vector2) -> void:
 	checkpoints.append(new_checkpoint)
 
 func _physics_process(_delta):
-	if (Input.is_action_just_pressed("interact")):
-		add_checkpoint(robot.position)
-
 	queue_redraw()
 
 func _draw():

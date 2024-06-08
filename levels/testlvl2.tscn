@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ybf3jv7g5s6b"]
+[gd_scene load_steps=8 format=3 uid="uid://ybf3jv7g5s6b"]
 
 [ext_resource type="PackedScene" uid="uid://b1gg5e8kp4384" path="res://robot/robot.tscn" id="1_qiamr"]
 [ext_resource type="PackedScene" uid="uid://cswjddao7c7gd" path="res://props/haus.tscn" id="2_lykm4"]
@@ -6,13 +6,19 @@
 [ext_resource type="PackedScene" uid="uid://c1dxd27ews2cu" path="res://props/Hecke/hecke.tscn" id="4_r43wu"]
 [ext_resource type="PackedScene" uid="uid://blhl3st23e63b" path="res://props/kiste/kiste.tscn" id="5_svl15"]
 [ext_resource type="PackedScene" uid="uid://m1f2y8cfvcd0" path="res://props/Fels/Fels.tscn" id="6_fwqom"]
+[ext_resource type="PackedScene" uid="uid://desc5w62oyqfi" path="res://props/connector/connector.tscn" id="7_ud36q"]
 
 [node name="TestLevel2" type="Node2D"]
 
 [node name="Robot" parent="." instance=ExtResource("1_qiamr")]
+unique_name_in_owner = true
 position = Vector2(531, 296)
 
 [node name="Haus" parent="." instance=ExtResource("2_lykm4")]
+position = Vector2(-624, 683)
+
+[node name="Haus2" parent="." instance=ExtResource("2_lykm4")]
+position = Vector2(1365, 690)
 
 [node name="Wasser_Teich" parent="." instance=ExtResource("3_o1ddo")]
 position = Vector2(342, 23)
@@ -29,3 +35,11 @@ scale = Vector2(2, 2)
 position = Vector2(670, -37)
 
 [node name="Midpoint" type="Node2D" parent="."]
+
+[node name="Connector" parent="." instance=ExtResource("7_ud36q")]
+unique_name_in_owner = true
+
+[connection signal="tree_entered" from="Haus" to="Robot" method="_on_haus_tree_entered"]
+[connection signal="tree_exited" from="Haus" to="Haus" method="_on_tree_exited"]
+[connection signal="tree_entered" from="Haus2" to="Robot" method="_on_haus_tree_entered"]
+[connection signal="tree_exited" from="Haus2" to="Haus2" method="_on_tree_exited"]

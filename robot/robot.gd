@@ -8,6 +8,9 @@ class_name Player
 
 var friction_multiplier: float = 1.0
 
+var house_position: Vector2
+var near_house:= false
+
 func _physics_process(_delta):
 	var steering = Input.get_action_strength("steer_right") - Input.get_action_strength("steer_left")
 	var drift_factor = min(0.1, abs(steering))
@@ -23,9 +26,15 @@ func _physics_process(_delta):
 
 	move_and_slide()
 	do_physics()
+	
+	if near_house == true:
+		%Connector.add_checkpoint(house_position)
 
 func do_physics() -> void:
 	for i in get_slide_collision_count():
 		var c = get_slide_collision(i)
 		if c.get_collider() is RigidBody2D:
 			c.get_collider().apply_central_impulse(-c.get_normal() * push_force)
+
+func set_house_position(position: Vector2) -> void:
+	house_position = position
