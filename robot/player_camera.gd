@@ -10,6 +10,8 @@ extends Node
 @export var max_roll: float = 10.0
 @export var shakeReduction: float = 2.5
 
+@export var move_factor := 2.0
+
 var stress: float = 0.0
 var shake: float = 0.0
 
@@ -24,7 +26,7 @@ func _physics_process(delta: float) -> void:
 		return
 	
 	# Position
-	var pos = (player.global_position + Globals.level.midpoint.global_position) / 2
+	var pos = (player.global_position + Globals.level.midpoint.global_position) / move_factor
 	%Cam.offset = pos
 	#print(%Cam.global_position)
 	
@@ -32,7 +34,7 @@ func _physics_process(delta: float) -> void:
 	zoom_accel = zoom_accel / 2.0
 	zoom_accel += Vector2(player.velocity.length(), player.velocity.length()) / 1000000 - Vector2.ONE / 2000
 	var distance = player.global_position.distance_to(Globals.level.midpoint.global_position)
-	extra_zoom = -Vector2(distance, distance) / 80000
+	extra_zoom = -Vector2(distance, distance) / 100000
 	extra_zoom = clamp(extra_zoom + zoom_accel, min_zoom - base_zoom, max_zoom - base_zoom)
 	
 	#print(extra_zoom, zoom_accel, distance, pos, %Cam.global_position)
