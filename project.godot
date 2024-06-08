@@ -55,6 +55,10 @@ go_backward={
 ]
 }
 
+[physics]
+
+2d/default_gravity=0.0
+
 [rendering]
 
 environment/defaults/default_clear_color=Color(0.10228, 0.0781511, 0.129688, 1)
