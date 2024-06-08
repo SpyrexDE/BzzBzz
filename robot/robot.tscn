@@ -10,8 +10,8 @@ radius = 65.192
 [node name="Robot" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_qe1k2")
-speed = 500.0
-friction = 1.3
+speed = 250.0
+friction = 1.1
 steering_speed = 0.1
 push_force = 1.0
 
