@@ -6,6 +6,7 @@ class_name Zap
 var connector: Connector
 var checkpoint_n: int
 var dead := false
+var is_moving := false
 
 var dist_from_last: float
 var last_checkpoint: Vector2
@@ -18,6 +19,11 @@ func _ready():
 	checkpoint_n += 1
 	last_checkpoint = connector.checkpoints[0]
 
+func activate():
+	%Sprite2D.visible = true
+	%PointLight2D.enabled = true
+	is_moving = true
+
 func kill():
 	print("dead")
 	dead = true
@@ -25,6 +31,9 @@ func kill():
 
 func _physics_process(_delta):
 	if (dead):
+		return
+
+	if !is_moving:
 		return
 		
 	for intersection in connector.intersection_points:

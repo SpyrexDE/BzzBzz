@@ -3,25 +3,25 @@
 [ext_resource type="Texture2D" uid="uid://gc77nf4be2q6" path="res://IMG_0141.webp" id="1_n45nw"]
 [ext_resource type="Script" path="res://ui/main_menu.gd" id="1_wr28q"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3s7gp"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_prkdc"]
 load_path = "res://.godot/imported/IMG_0141.webp-5bc5dec585e961a519a3b1ae616f4cae.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6th4r"]
-atlas = SubResource("CompressedTexture2D_3s7gp")
+atlas = SubResource("CompressedTexture2D_prkdc")
 region = Rect2(621, 184, 434, 105)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dffql"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_28cwx"]
 load_path = "res://.godot/imported/IMG_0141.webp-5bc5dec585e961a519a3b1ae616f4cae.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p54jr"]
-atlas = SubResource("CompressedTexture2D_dffql")
+atlas = SubResource("CompressedTexture2D_28cwx")
 region = Rect2(614, 374, 434, 108)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3hadn"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_51xb1"]
 load_path = "res://.godot/imported/IMG_0141.webp-5bc5dec585e961a519a3b1ae616f4cae.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tf5e2"]
-atlas = SubResource("CompressedTexture2D_3hadn")
+atlas = SubResource("CompressedTexture2D_51xb1")
 region = Rect2(621, 515, 439, 105)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hijdy"]

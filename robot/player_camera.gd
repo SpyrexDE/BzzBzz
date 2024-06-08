@@ -13,7 +13,6 @@ extends Node
 var stress: float = 0.0
 var shake: float = 0.0
 
-
 var extra_zoom := Vector2.ZERO
 var zoom_accel := Vector2.ZERO
 
@@ -27,7 +26,7 @@ func _physics_process(delta: float) -> void:
 	# Position
 	var pos = (player.global_position + Globals.level.midpoint.global_position) / 2
 	%Cam.offset = pos
-	print(%Cam.global_position)
+	#print(%Cam.global_position)
 	
 	# Zoom
 	zoom_accel = zoom_accel / 2.0
@@ -43,16 +42,16 @@ func _physics_process(delta: float) -> void:
 
 func _process_shake(delta) -> void:
 	# Lerp to normal position/rotation
-	%Cam.rotation_degrees = lerp(%Cam.rotation_degrees, 0.0, delta * 5.0)
+	%Cam.rotation_degrees = lerp( %Cam.rotation_degrees, 0.0, delta * 5.0)
 	
-	%Cam.position.x = lerp(%Cam.position.x, 0.0, delta * 5.0)
-	%Cam.position.y = lerp(%Cam.position.y, 0.0, delta * 5.0)
+	%Cam.position.x = lerp( %Cam.position.x, 0.0, delta * 5.0)
+	%Cam.position.y = lerp( %Cam.position.y, 0.0, delta * 5.0)
 	
 	# Shake logic
 	shake = stress * stress
 	
 	# Rotation
-	%Cam.rotation_degrees += max_roll * shake *  _get_noise(randi(), delta) * 100
+	%Cam.rotation_degrees += max_roll * shake * _get_noise(randi(), delta) * 100
 	
 	# Position
 	var offset_x = max_offset * shake * _get_noise(randi(), delta + 1.0)
@@ -63,7 +62,6 @@ func _process_shake(delta) -> void:
 	# Shake reduction
 	stress -= shakeReduction * delta
 	stress = max(0, stress)
-
 
 func _get_noise(noise_seed, time) -> float:
 	var n = FastNoiseLite.new()
