@@ -6,23 +6,30 @@ var midpoint: Node2D
 
 @export var start_delay: float = 5.0
 
+var timer: Timer
+
 func _ready() -> void:
 	Globals.level = self
 
-	var timer = Timer.new()
-	timer.wait_time = start_delay
-	timer.one_shot = true
+	timer = Timer.new()
+	timer.wait_time = 1
+	timer.one_shot = false
 	add_child(timer)
 	timer.timeout.connect(_start_Zap)
 	timer.start()
 
 func _start_Zap():
-	print("timers over")
-	%Zap.activate()
-	%Pole.do_zap_animation()
+	if start_delay > 0:
+		start_delay -= 1
+		$Label.text = str(start_delay)
+	else:
+		$Label.hide()
+		%Zap.activate()
+		%Pole.do_zap_animation()
+		timer.stop()
 
 func game_over():
-	pass
+	get_tree().change_scene_to_file("res://ui/game_over_menu.tscn")
 
 func game_over_cat():
 	get_tree().change_scene_to_file("res://ui/game_over_menu_cat.tscn")

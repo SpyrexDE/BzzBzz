@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dwuobwmffxcj8"]
+[gd_scene load_steps=20 format=3 uid="uid://dwuobwmffxcj8"]
 
 [ext_resource type="Script" path="res://levels/level.gd" id="1_gibkr"]
 [ext_resource type="TileSet" uid="uid://g0f8ygs614gt" path="res://tileset.tres" id="2_lr2wb"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://wt5tsi27by3d" path="res://props/pole/pole.tscn" id="14_cvvpo"]
 [ext_resource type="PackedScene" uid="uid://blhl3st23e63b" path="res://props/kiste/kiste.tscn" id="15_dcfn3"]
 [ext_resource type="PackedScene" uid="uid://soxhgdm3pl15" path="res://props/lantern/lantern.tscn" id="16_hdpho"]
+[ext_resource type="PackedScene" uid="uid://blfekpuyeahq5" path="res://props/label.tscn" id="17_bo42u"]
 
 [sub_resource type="Environment" id="Environment_fkbrj"]
 background_mode = 3
@@ -142,3 +143,5 @@ position = Vector2(-446, -2285)
 
 [node name="Lantern10" parent="." instance=ExtResource("16_hdpho")]
 position = Vector2(-2002, -1311)
+
+[node name="Label" parent="." instance=ExtResource("17_bo42u")]
