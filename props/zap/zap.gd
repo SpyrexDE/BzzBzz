@@ -27,3 +27,4 @@ func _physics_process(_delta):
 			position = connector.checkpoints[- 1] + dir * dist_from_last
 		else:
 			print("dead")
+			Globals.camera.add_stress(50.0)

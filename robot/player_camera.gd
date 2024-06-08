@@ -19,6 +19,9 @@ var shake: float = 0.0
 var extra_zoom := Vector2.ZERO
 var zoom_accel := Vector2.ZERO
 
+func _ready() -> void:
+	Globals.camera = self
+
 func _physics_process(delta: float) -> void:
 	if not Globals.level:
 		return
