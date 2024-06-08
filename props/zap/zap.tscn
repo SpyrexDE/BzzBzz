@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c8oiah8jn02yx" path="res://props/zap/Blitzableiter_AN.png" id="1_mnera"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6yvlq"]
-radius = 35.0571
+radius = 7.07107
 
 [sub_resource type="Animation" id="Animation_t3gwo"]
 length = 0.001
