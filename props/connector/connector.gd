@@ -3,15 +3,13 @@ extends Node2D
 var robot
 var last_checkpoint: Vector2
 var checkpoints: Array[Vector2]
-var debug_points: Array[Vector2]
-var debug_points_temp: Array[Vector2]
+var intersection_points: Array[Vector2]
 
 func _ready():
 	checkpoints.append(Vector2(0, 0))
 	robot = %Robot
 
-func add_checkpoint(new_checkpoint: Vector2) -> bool:
-	debug_points_temp.clear()
+func add_checkpoint(new_checkpoint: Vector2) -> void:
 	var last = checkpoints[0]
 	for checkpoint in checkpoints:
 		#get the point of intersection
@@ -39,13 +37,11 @@ func add_checkpoint(new_checkpoint: Vector2) -> bool:
 				var xx = aac.dot(bbc)
 
 				if (x < 0&&xx < 0):
-					debug_points.append(intersection)
+					intersection_points.append(intersection)
 
 		last = checkpoint
 
 	checkpoints.append(new_checkpoint)
-	print("----")
-	return true
 
 func _physics_process(_delta):
 	if (Input.is_action_just_pressed("interact")):
@@ -60,5 +56,5 @@ func _draw():
 		last = checkpoint
 	draw_line(checkpoints[ - 1], robot.position, Color.GREEN, 10.0)
 
-	for debug_point in debug_points:
+	for debug_point in intersection_points:
 		draw_circle(debug_point, 10, Color.RED)
