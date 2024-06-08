@@ -16,6 +16,9 @@ script = ExtResource("1_6ch1l")
 scale = Vector2(0.334, 0.4)
 texture = ExtResource("3_tq8ro")
 
+[node name="PointLight2D" parent="haus_gemeinsamkeiten" index="2"]
+texture = ExtResource("3_tq8ro")
+
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(41, -6)
 scale = Vector2(0.59, 0.59)

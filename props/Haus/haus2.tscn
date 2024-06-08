@@ -15,6 +15,9 @@ script = ExtResource("1_hw70j")
 [node name="Sprite2D" parent="haus_gemeinsamkeiten" index="1"]
 texture = ExtResource("3_5lnqx")
 
+[node name="PointLight2D" parent="haus_gemeinsamkeiten" index="2"]
+texture = ExtResource("3_5lnqx")
+
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(66.75, -13.75)
 polygon = PackedVector2Array(-176.75, -92.25, -76.75, -114.25, -6.75, -112.25, 85.25, -94.25, 81.25, 137.75, -16.75, 151.75, -82.75, 145.75, -178.75, 129.75, -221.75, 25.75)
