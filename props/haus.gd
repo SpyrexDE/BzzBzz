@@ -1,10 +1,8 @@
 extends StaticBody2D
+class_name Haus
 
 var strom := false
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+var is_connected_to_cable := false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
@@ -12,19 +10,14 @@ func _process(_delta):
 	pass
 
 func _on_area_2d_body_entered(body):
-	if body is Player:
-		%Robot.near_house = true
-		%Robot.set_house_position(position)
-	pass # Replace with function body.
+	if body is Player and !is_connected_to_cable:
+		%Robot.set_house(self)
 	
 func _lightup():
 	if strom == true:
 		$AnimationPlayer.play("haus_light_up")
 	pass
 
-
 func _on_area_2d_body_exited(body):
 	if body is Player:
-		%Robot.near_house = false
-		%Robot.set_house_position(Vector2(0,0))
-	pass # Replace with function body.
+		%Robot.set_house(null)
