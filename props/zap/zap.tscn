@@ -1,54 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://vqts8ef4u5h5"]
+[gd_scene load_steps=4 format=3 uid="uid://vqts8ef4u5h5"]
 
 [ext_resource type="Script" path="res://props/zap/zap.gd" id="1_apmkh"]
 [ext_resource type="Texture2D" uid="uid://c8oiah8jn02yx" path="res://props/zap/Blitzableiter_AN.png" id="1_mnera"]
-[ext_resource type="Texture2D" uid="uid://cq2tvojinwnb7" path="res://light.png" id="3_3h4fc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6yvlq"]
 radius = 35.0571
-
-[sub_resource type="Animation" id="Animation_t3gwo"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("PointLight2D:energy")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [1.69]
-}
-
-[sub_resource type="Animation" id="Animation_4uq0m"]
-resource_name = "flacker"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("PointLight2D:energy")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.1, 0.2, 0.3, 0.5, 0.6, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [15.49, 0.49, 3.29, 8.85, 12.38, 1.69]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_tp7ew"]
-_data = {
-"RESET": SubResource("Animation_t3gwo"),
-"flacker": SubResource("Animation_4uq0m")
-}
 
 [node name="Zap" type="Node2D"]
 script = ExtResource("1_apmkh")
 speed = 10.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(2, 2, 1, 1)
 texture = ExtResource("1_mnera")
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -57,15 +20,3 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_6yvlq")
-
-[node name="PointLight2D" type="PointLight2D" parent="."]
-scale = Vector2(1.29688, 1.29688)
-energy = 1.69
-texture = ExtResource("3_3h4fc")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-unique_name_in_owner = true
-libraries = {
-"": SubResource("AnimationLibrary_tp7ew")
-}
-autoplay = "flacker"
