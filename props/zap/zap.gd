@@ -21,7 +21,6 @@ func _ready():
 
 func activate():
 	%Sprite2D.visible = true
-	%PointLight2D.enabled = true
 	is_moving = true
 
 func kill():

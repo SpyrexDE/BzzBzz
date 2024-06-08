@@ -29,6 +29,7 @@ shape = SubResource("CircleShape2D_o10pc")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 scale = Vector2(0.5, 0.5)
+energy = 0.7
 texture = ExtResource("4_gperx")
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
