@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://gc77nf4be2q6" path="res://IMG_0141.webp" id="1_n45nw"]
 [ext_resource type="Script" path="res://ui/main_menu.gd" id="1_wr28q"]
+[ext_resource type="AudioStream" uid="uid://da3eyfmtldnje" path="res://menumusic.mp3" id="2_8xd8q"]
 [ext_resource type="Texture2D" uid="uid://cj1shdifyd5k" path="res://IMG_0153.png" id="3_f5216"]
 [ext_resource type="Texture2D" uid="uid://dblk0fgyxp8h" path="res://IMG_0151.png" id="4_13s5m"]
-[ext_resource type="AudioStream" uid="uid://b1yrrx8nn0uwl" path="res://game-on-153596.mp3" id="5_2it1s"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_prkdc"]
 load_path = "res://.godot/imported/IMG_0141.webp-5bc5dec585e961a519a3b1ae616f4cae.ctex"
@@ -64,6 +64,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_wr28q")
+menusoun = ExtResource("2_8xd8q")
 
 [node name="StartButton" type="TextureButton" parent="."]
 layout_mode = 2
@@ -102,10 +103,6 @@ texture = ExtResource("3_f5216")
 position = Vector2(879, 383)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("4_13s5m")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_2it1s")
-autoplay = true
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="StartButton2" to="." method="_on_start_button_2_pressed"]
