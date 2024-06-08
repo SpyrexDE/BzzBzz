@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ybf3jv7g5s6b"]
+[gd_scene load_steps=10 format=3 uid="uid://ybf3jv7g5s6b"]
 
 [ext_resource type="Script" path="res://levels/level.gd" id="1_7u7sm"]
 [ext_resource type="PackedScene" uid="uid://b1gg5e8kp4384" path="res://robot/robot.tscn" id="1_qiamr"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://blhl3st23e63b" path="res://props/kiste/kiste.tscn" id="5_svl15"]
 [ext_resource type="PackedScene" uid="uid://m1f2y8cfvcd0" path="res://props/Fels/Fels.tscn" id="6_fwqom"]
 [ext_resource type="PackedScene" uid="uid://desc5w62oyqfi" path="res://props/connector/connector.tscn" id="7_ud36q"]
+[ext_resource type="PackedScene" uid="uid://d06k0iiax55p6" path="res://props/Busch/busch.tscn" id="8_k1bbo"]
 
 [node name="TestLevel2" type="Node2D" node_paths=PackedStringArray("midpoint")]
 script = ExtResource("1_7u7sm")
@@ -38,6 +39,9 @@ scale = Vector2(2, 2)
 position = Vector2(670, -37)
 
 [node name="Midpoint" type="Node2D" parent="."]
+
+[node name="busch" parent="." instance=ExtResource("8_k1bbo")]
+position = Vector2(944, 132)
 
 [node name="Connector" parent="." instance=ExtResource("7_ud36q")]
 unique_name_in_owner = true
