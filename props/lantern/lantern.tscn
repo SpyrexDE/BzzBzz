@@ -10,7 +10,7 @@
 [node name="PointLight2D" type="PointLight2D" parent="."]
 scale = Vector2(5, 5)
 texture = ExtResource("1_voc3c")
-texture_scale = 0.3
+texture_scale = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_5ofs2")
