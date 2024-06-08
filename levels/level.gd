@@ -24,6 +24,9 @@ func _start_Zap():
 func game_over():
 	pass
 
+func game_over_cat():
+	get_tree().change_scene_to_file("res://ui/game_over_menu_cat.tscn")
+
 func win():
 	get_tree().change_scene_to_file("res://ui/win_menu.tscn")
 

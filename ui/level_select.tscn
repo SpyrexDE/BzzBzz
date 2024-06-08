@@ -1,0 +1,102 @@
+[gd_scene load_steps=8 format=3 uid="uid://buh50awh5rjib"]
+
+[ext_resource type="Script" path="res://ui/level_select.gd" id="1_sp1xy"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rvu0i"]
+load_path = "res://.godot/imported/IMG_0141.webp-5bc5dec585e961a519a3b1ae616f4cae.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ir8pw"]
+atlas = SubResource("CompressedTexture2D_rvu0i")
+region = Rect2(614, 945, 434, 108)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vrn51"]
+load_path = "res://.godot/imported/IMG_0141.webp-5bc5dec585e961a519a3b1ae616f4cae.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1pf34"]
+atlas = SubResource("CompressedTexture2D_vrn51")
+region = Rect2(138, 945, 434, 105)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_x75lj"]
+load_path = "res://.godot/imported/IMG_0141.webp-5bc5dec585e961a519a3b1ae616f4cae.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1vtv"]
+atlas = SubResource("CompressedTexture2D_x75lj")
+region = Rect2(394, 1094, 444, 108)
+
+[node name="LevelSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sp1xy")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 0, 1)
+layout_mode = 0
+offset_left = 51.0
+offset_top = 285.0
+offset_right = 202.0
+offset_bottom = 418.0
+theme_override_font_sizes/font_size = 91
+text = "1"
+
+[node name="Button2" type="Button" parent="."]
+modulate = Color(1, 1, 0, 1)
+layout_mode = 0
+offset_left = 259.0
+offset_top = 285.0
+offset_right = 410.0
+offset_bottom = 418.0
+theme_override_font_sizes/font_size = 91
+text = "2"
+
+[node name="Button3" type="Button" parent="."]
+modulate = Color(1, 1, 0, 1)
+layout_mode = 0
+offset_left = 468.0
+offset_top = 285.0
+offset_right = 619.0
+offset_bottom = 418.0
+theme_override_font_sizes/font_size = 91
+text = "3"
+
+[node name="Button4" type="Button" parent="."]
+modulate = Color(1, 1, 0, 1)
+layout_mode = 0
+offset_left = 692.0
+offset_top = 285.0
+offset_right = 843.0
+offset_bottom = 418.0
+theme_override_font_sizes/font_size = 91
+text = "4"
+
+[node name="Button5" type="Button" parent="."]
+modulate = Color(1, 1, 0, 1)
+layout_mode = 0
+offset_left = 910.0
+offset_top = 285.0
+offset_right = 1061.0
+offset_bottom = 418.0
+theme_override_font_sizes/font_size = 91
+text = "5"
+
+[node name="BackButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 367.0
+offset_top = 521.0
+offset_right = 801.0
+offset_bottom = 629.0
+mouse_default_cursor_shape = 2
+texture_normal = SubResource("AtlasTexture_ir8pw")
+texture_pressed = SubResource("AtlasTexture_1pf34")
+texture_hover = SubResource("AtlasTexture_y1vtv")
+stretch_mode = 5
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
