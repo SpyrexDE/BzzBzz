@@ -16,7 +16,7 @@ steering_speed = 0.1
 [node name="Sprite" type="Sprite2D" parent="."]
 position = Vector2(3, -8.5)
 scale = Vector2(2.61017, 2.70909)
-texture = ExtResource("2_l0wuv")
+texture = ExtResource("2_y6hw3")
 
 [node name="CollisionShape" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_o10pc")
