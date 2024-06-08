@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dahxw88ts6t6k"]
+[gd_scene load_steps=12 format=3 uid="uid://dahxw88ts6t6k"]
 
 [ext_resource type="PackedScene" uid="uid://b1gg5e8kp4384" path="res://robot/robot.tscn" id="1_vcimh"]
 [ext_resource type="Script" path="res://levels/level.gd" id="1_ysstf"]
@@ -10,6 +10,11 @@
 [ext_resource type="PackedScene" uid="uid://c1dxd27ews2cu" path="res://props/Hecke/hecke.tscn" id="8_udnlr"]
 [ext_resource type="PackedScene" uid="uid://dd4pjpgedovfg" path="res://props/Hinderniss_Wasser/wasser_teich.tscn" id="9_8oros"]
 [ext_resource type="PackedScene" uid="uid://blhl3st23e63b" path="res://props/kiste/kiste.tscn" id="10_4x42r"]
+
+[sub_resource type="Environment" id="Environment_ixyig"]
+background_mode = 3
+glow_enabled = true
+glow_blend_mode = 1
 
 [node name="Testlvl1" type="Node2D" node_paths=PackedStringArray("midpoint")]
 script = ExtResource("1_ysstf")
@@ -61,3 +66,6 @@ offset_top = -4380.0
 offset_right = 8041.0
 offset_bottom = 5771.0
 color = Color(0.0727351, 0.162606, 0.114061, 1)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ixyig")
