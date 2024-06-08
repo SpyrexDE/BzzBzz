@@ -15,7 +15,7 @@ unique_name_in_owner = true
 position = Vector2(151, 231)
 
 [node name="Haus" parent="." instance=ExtResource("2_qns4n")]
-position = Vector2(584, 303)
+position = Vector2(1390, 80)
 
 [node name="Connector" parent="." instance=ExtResource("3_pgg6y")]
 unique_name_in_owner = true
@@ -25,3 +25,9 @@ position = Vector2(371, 238)
 
 [node name="Zap" parent="." instance=ExtResource("5_s8uj7")]
 position = Vector2(77, 77)
+
+[node name="Haus2" parent="." instance=ExtResource("2_qns4n")]
+position = Vector2(-400, 1233)
+
+[node name="Haus3" parent="." instance=ExtResource("2_qns4n")]
+position = Vector2(2406, 1599)
