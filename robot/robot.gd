@@ -10,6 +10,9 @@ var friction_multiplier: float = 1.0
 
 var haus: Haus
 
+func _ready():
+	Globals.robot = self
+
 func _physics_process(_delta):
 	var steering = Input.get_action_strength("steer_right") - Input.get_action_strength("steer_left")
 	#var drift_factor = min(0.1, abs(steering))
