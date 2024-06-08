@@ -24,7 +24,6 @@ unique_name_in_owner = true
 position = Vector2(371, 238)
 
 [node name="Zap" parent="." instance=ExtResource("5_s8uj7")]
-position = Vector2(77, 77)
 
 [node name="Haus2" parent="." instance=ExtResource("2_qns4n")]
 position = Vector2(-400, 1233)

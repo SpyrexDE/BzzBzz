@@ -28,7 +28,7 @@ func _physics_process(_delta):
 	#move along cable
 	if len(connector.checkpoints) > checkpoint_n:
 		var dir = (connector.checkpoints[checkpoint_n] - last_checkpoint).normalized()
-		position = connector.checkpoints[checkpoint_n] + dir * dist_from_last
+		position = last_checkpoint + dir * dist_from_last
 	else:
 		if (position - connector.robot.position).length() > 10:
 			var dir = (connector.robot.position - connector.checkpoints[- 1]).normalized()
