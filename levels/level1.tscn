@@ -1,6 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://dwuobwmffxcj8"]
+[gd_scene load_steps=20 format=3 uid="uid://dwuobwmffxcj8"]
 
 [ext_resource type="Script" path="res://levels/level.gd" id="1_gibkr"]
+[ext_resource type="AudioStream" uid="uid://bjutf4lf6j758" path="res://ingame.mp3" id="2_isvaq"]
 [ext_resource type="TileSet" uid="uid://g0f8ygs614gt" path="res://tileset.tres" id="2_lr2wb"]
 [ext_resource type="PackedScene" uid="uid://desc5w62oyqfi" path="res://props/connector/connector.tscn" id="3_bxsdd"]
 [ext_resource type="PackedScene" uid="uid://b1gg5e8kp4384" path="res://robot/robot.tscn" id="4_x5iry"]
@@ -27,6 +28,7 @@ glow_blend_mode = 1
 [node name="Level" type="Node2D" node_paths=PackedStringArray("midpoint")]
 script = ExtResource("1_gibkr")
 midpoint = NodePath("Midpoint")
+lvl_music = ExtResource("2_isvaq")
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(5, 5)

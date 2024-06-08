@@ -4,10 +4,13 @@ class_name Level
 @export
 var midpoint: Node2D
 
+@export var lvl_music: AudioStreamMP3
+
 @export var start_delay: float = 5.0
 
 func _ready() -> void:
 	Globals.level = self
+	SoundEffects.play_sound(lvl_music)
 
 	var timer = Timer.new()
 	timer.wait_time = start_delay
