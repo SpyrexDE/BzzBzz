@@ -1,5 +1,7 @@
 extends Node2D
 
+class_name Zap
+
 @export var speed: float
 var connector: Connector
 var checkpoint_n: int
