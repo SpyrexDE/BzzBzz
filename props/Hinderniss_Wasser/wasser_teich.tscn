@@ -12,7 +12,6 @@ script = ExtResource("1_7gu2o")
 polygon = PackedVector2Array(-128, -90, -99, -111, -26, -83, 42, -57, 141, -59, 150, -32, 144, 19, 46, 121, -63, 113, -156, 52, -159, -47)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-z_index = -1
 texture = ExtResource("1_h2xk1")
 
 [node name="Area2D" type="Area2D" parent="."]

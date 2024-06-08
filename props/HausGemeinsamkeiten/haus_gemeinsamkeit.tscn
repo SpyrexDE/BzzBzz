@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=3 uid="uid://df5w3m6v7xpn5"]
+
+[ext_resource type="Shader" path="res://props/Haus/haus.gdshader" id="1_sr1s3"]
+[ext_resource type="Texture2D" uid="uid://bc7pl5rp5037s" path="res://Haus1.png" id="2_54vnt"]
+
+[sub_resource type="GDScript" id="GDScript_go4si"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_04scb"]
+shader = ExtResource("1_sr1s3")
+shader_parameter/ring_radius = 0.36
+shader_parameter/thickness_scalar = 0.15
+shader_parameter/oscillation_scalar = 0.01
+shader_parameter/speed = 1.0
+shader_parameter/main_color = Color(1, 1, 0, 1)
+shader_parameter/lerp_color = Color(1, 1, 0.341176, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0118q"]
+shader = ExtResource("1_sr1s3")
+shader_parameter/ring_radius = 0.4
+shader_parameter/thickness_scalar = 0.7
+shader_parameter/oscillation_scalar = 0.025
+shader_parameter/speed = 1.0
+shader_parameter/main_color = Color(1, 1, 1, 1)
+shader_parameter/lerp_color = Color(1, 1, 1, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gvtmm"]
+radius = 401.125
+
+[node name="HausGemeinsamkeit" type="Node2D"]
+script = SubResource("GDScript_go4si")
+
+[node name="ShaderSprite" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_04scb")
+position = Vector2(-1.49998, 4.49998)
+scale = Vector2(2.82368, 2.35948)
+texture = ExtResource("2_54vnt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(3.8147e-06, -7.62939e-06)
+energy = 0.0
+texture = ExtResource("2_54vnt")
+
+[node name="Area2D" type="Area2D" parent="."]
+material = SubResource("ShaderMaterial_0118q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_gvtmm")
