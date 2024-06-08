@@ -16,6 +16,7 @@ steering_speed = 0.1
 push_force = 1.0
 
 [node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(2.5, 2.5)
 texture = ExtResource("2_ylexb")
 
 [node name="CollisionShape" type="CollisionShape2D" parent="."]
