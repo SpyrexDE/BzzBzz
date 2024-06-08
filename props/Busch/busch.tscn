@@ -4,6 +4,7 @@
 [ext_resource type="Script" path="res://props/Busch/busch.gd" id="1_q7iwh"]
 
 [node name="busch" type="StaticBody2D"]
+z_index = 1
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_q7iwh")

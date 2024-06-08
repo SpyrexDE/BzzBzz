@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://bh4y57fljt8t1"]
+
+[ext_resource type="Shader" path="res://props/Haus/haus.gdshader" id="1_eu3v8"]
+[ext_resource type="Texture2D" uid="uid://bc7pl5rp5037s" path="res://Haus1.png" id="2_elqwq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cuvbs"]
+shader = ExtResource("1_eu3v8")
+shader_parameter/ring_radius = 0.36
+shader_parameter/thickness_scalar = 0.15
+shader_parameter/oscillation_scalar = 0.01
+shader_parameter/speed = 1.0
+shader_parameter/main_color = Color(1, 1, 0, 1)
+shader_parameter/lerp_color = Color(1, 1, 0.341176, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nsqj8"]
+shader = ExtResource("1_eu3v8")
+shader_parameter/ring_radius = 0.4
+shader_parameter/thickness_scalar = 0.7
+shader_parameter/oscillation_scalar = 0.025
+shader_parameter/speed = 1.0
+shader_parameter/main_color = Color(1, 1, 1, 1)
+shader_parameter/lerp_color = Color(1, 1, 1, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eg6st"]
+radius = 401.125
+
+[node name="haus_gemeinsamkeiten" type="Node2D"]
+position = Vector2(-1.49998, 4.49998)
+scale = Vector2(2.82368, 2.35948)
+
+[node name="ShaderSprite" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_cuvbs")
+texture = ExtResource("2_elqwq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.531215, -1.90719)
+scale = Vector2(0.354148, 0.423822)
+texture = ExtResource("2_elqwq")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0.531216, -1.90719)
+scale = Vector2(0.354148, 0.423822)
+energy = 0.0
+texture = ExtResource("2_elqwq")
+
+[node name="Area2D" type="Area2D" parent="."]
+material = SubResource("ShaderMaterial_nsqj8")
+position = Vector2(0.531215, -1.90719)
+scale = Vector2(0.354148, 0.423822)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_eg6st")

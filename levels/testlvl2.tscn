@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ybf3jv7g5s6b"]
+[gd_scene load_steps=15 format=3 uid="uid://ybf3jv7g5s6b"]
 
 [ext_resource type="Script" path="res://levels/level.gd" id="1_7u7sm"]
 [ext_resource type="PackedScene" uid="uid://b1gg5e8kp4384" path="res://robot/robot.tscn" id="1_qiamr"]
@@ -10,6 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://desc5w62oyqfi" path="res://props/connector/connector.tscn" id="7_ud36q"]
 [ext_resource type="PackedScene" uid="uid://d06k0iiax55p6" path="res://props/Busch/busch.tscn" id="8_k1bbo"]
 [ext_resource type="PackedScene" uid="uid://ofp2ksjj0qxe" path="res://props/Katze/katze.tscn" id="9_vt5hg"]
+[ext_resource type="PackedScene" uid="uid://dg7xqp2545cv6" path="res://props/Haus/haus2.tscn" id="11_u3b4n"]
+[ext_resource type="PackedScene" uid="uid://dnf1omyvi8q4q" path="res://props/Haus/haus3.tscn" id="12_rmn5v"]
+[ext_resource type="PackedScene" uid="uid://b1k66fp3jkfmy" path="res://props/Haus/haus4.tscn" id="13_ejn0y"]
+[ext_resource type="PackedScene" uid="uid://c1yjandhk81ju" path="res://props/Haus/haus5.tscn" id="14_du2hd"]
 
 [node name="TestLevel2" type="Node2D" node_paths=PackedStringArray("midpoint")]
 script = ExtResource("1_7u7sm")
@@ -20,10 +24,7 @@ unique_name_in_owner = true
 position = Vector2(531, 296)
 
 [node name="Haus" parent="." instance=ExtResource("2_lykm4")]
-position = Vector2(-624, 683)
-
-[node name="Haus2" parent="." instance=ExtResource("2_lykm4")]
-position = Vector2(1365, 690)
+position = Vector2(-438, 336)
 
 [node name="Wasser_Teich" parent="." instance=ExtResource("3_o1ddo")]
 position = Vector2(342, 23)
@@ -50,7 +51,17 @@ position = Vector2(898, 333)
 [node name="Connector" parent="." instance=ExtResource("7_ud36q")]
 unique_name_in_owner = true
 
+[node name="Haus3" parent="." instance=ExtResource("11_u3b4n")]
+position = Vector2(432, 804)
+
+[node name="Haus4" parent="." instance=ExtResource("12_rmn5v")]
+position = Vector2(889, -461)
+
+[node name="Haus5" parent="." instance=ExtResource("13_ejn0y")]
+position = Vector2(-152, -443)
+
+[node name="Haus6" parent="." instance=ExtResource("14_du2hd")]
+position = Vector2(1475, 671)
+
 [connection signal="tree_entered" from="Haus" to="Robot" method="_on_haus_tree_entered"]
 [connection signal="tree_exited" from="Haus" to="Haus" method="_on_tree_exited"]
-[connection signal="tree_entered" from="Haus2" to="Robot" method="_on_haus_tree_entered"]
-[connection signal="tree_exited" from="Haus2" to="Haus2" method="_on_tree_exited"]

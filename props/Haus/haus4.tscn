@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cswjddao7c7gd"]
+[gd_scene load_steps=8 format=3 uid="uid://b1k66fp3jkfmy"]
 
-[ext_resource type="Script" path="res://props/Haus/haus.gd" id="1_10jd8"]
-[ext_resource type="PackedScene" uid="uid://bh4y57fljt8t1" path="res://props/HausGemeinsamkeiten/haus_gemeinsamkeiten.tscn" id="2_w0gq1"]
+[ext_resource type="Script" path="res://props/Haus/haus.gd" id="1_027r5"]
+[ext_resource type="PackedScene" uid="uid://bh4y57fljt8t1" path="res://props/HausGemeinsamkeiten/haus_gemeinsamkeiten.tscn" id="2_a4wt5"]
+[ext_resource type="Texture2D" uid="uid://dhum2mcrn2yh8" path="res://Haus4.png" id="3_a1o4b"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_v57pw"]
 
@@ -43,13 +44,17 @@ _data = {
 
 [node name="Haus" type="StaticBody2D"]
 material = SubResource("CanvasItemMaterial_v57pw")
-script = ExtResource("1_10jd8")
+script = ExtResource("1_027r5")
 
-[node name="haus_gemeinsamkeiten" parent="." instance=ExtResource("2_w0gq1")]
+[node name="haus_gemeinsamkeiten" parent="." instance=ExtResource("2_a4wt5")]
+
+[node name="Sprite2D" parent="haus_gemeinsamkeiten" index="1"]
+scale = Vector2(0.835, 1)
+texture = ExtResource("3_a1o4b")
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(66.75, -13.75)
-polygon = PackedVector2Array(-83.75, 29.75, -85.75, -178.25, 86.25, -176.25, 84.25, 185.75, -85.75, 189.75, -217.75, 153.75, -221.75, 25.75)
+polygon = PackedVector2Array(-190.75, -116.25, 53.25, -111.25, 53.25, 112.75, 9.25, 110.75, 7.25, 169.75, -134.75, 165.75, -132.75, 110.75, -193.75, 106.75)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
