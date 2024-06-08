@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bh4y57fljt8t1"]
+[gd_scene load_steps=8 format=3 uid="uid://bh4y57fljt8t1"]
 
 [ext_resource type="Script" path="res://props/HausGemeinsamkeiten/haus_gemeinsamkeiten.gd" id="1_4mdgx"]
 [ext_resource type="Shader" path="res://props/Haus/haus.gdshader" id="1_eu3v8"]
 [ext_resource type="Texture2D" uid="uid://bc7pl5rp5037s" path="res://Haus1.png" id="2_elqwq"]
+[ext_resource type="Texture2D" uid="uid://cq2tvojinwnb7" path="res://light.png" id="4_gkxj3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_cuvbs"]
 shader = ExtResource("1_eu3v8")
@@ -38,6 +39,12 @@ texture = ExtResource("2_elqwq")
 position = Vector2(0.531215, -1.90719)
 scale = Vector2(0.354148, 0.423822)
 texture = ExtResource("2_elqwq")
+
+[node name="Light" type="PointLight2D" parent="."]
+position = Vector2(0, 2.38419e-07)
+scale = Vector2(1, 1)
+energy = 0.5
+texture = ExtResource("4_gkxj3")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(0.531216, -1.90719)
