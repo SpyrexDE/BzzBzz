@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://4541kxcs1p1m"]
+[gd_scene load_steps=18 format=3 uid="uid://4541kxcs1p1m"]
 
 [ext_resource type="Script" path="res://levels/level.gd" id="1_gibkr"]
 [ext_resource type="TileSet" uid="uid://g0f8ygs614gt" path="res://tileset.tres" id="2_lr2wb"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://ofp2ksjj0qxe" path="res://props/Katze/katze.tscn" id="12_plljg"]
 [ext_resource type="PackedScene" uid="uid://vqts8ef4u5h5" path="res://props/zap/zap.tscn" id="13_if74u"]
 [ext_resource type="PackedScene" uid="uid://wt5tsi27by3d" path="res://props/pole/pole.tscn" id="14_cvvpo"]
+[ext_resource type="PackedScene" uid="uid://blhl3st23e63b" path="res://props/kiste/kiste.tscn" id="15_dcfn3"]
 
 [sub_resource type="Environment" id="Environment_fkbrj"]
 background_mode = 3
@@ -75,28 +76,31 @@ rotation = 3.14159
 shape = SubResource("WorldBoundaryShape2D_28s12")
 
 [node name="Haus" parent="." instance=ExtResource("5_rme1l")]
-position = Vector2(-408, 1119)
+position = Vector2(-1780, 849)
 
 [node name="Haus2" parent="." instance=ExtResource("6_odmhw")]
-position = Vector2(1531, 112)
+position = Vector2(812, -601)
 
 [node name="Haus3" parent="." instance=ExtResource("7_6j534")]
-position = Vector2(-2015, -944)
+position = Vector2(-1723, -802)
 
 [node name="busch" parent="." instance=ExtResource("8_chk7u")]
-position = Vector2(177, 817)
+position = Vector2(-674, 745)
 
 [node name="Fels" parent="." instance=ExtResource("9_x0pee")]
-position = Vector2(-882, 593)
+position = Vector2(-1044, -690)
 
 [node name="Hecke" parent="." instance=ExtResource("10_xjga3")]
-position = Vector2(-1338, -35)
+position = Vector2(-2147, -35)
+
+[node name="Hecke2" parent="." instance=ExtResource("10_xjga3")]
+position = Vector2(-1488, -35)
 
 [node name="Wasser_Teich" parent="." instance=ExtResource("11_rt8tl")]
-position = Vector2(-233, -498)
+position = Vector2(21, -1251)
 
 [node name="Katze" parent="." instance=ExtResource("12_plljg")]
-position = Vector2(622, -15)
+position = Vector2(-642, -1010)
 
 [node name="Zap" parent="." instance=ExtResource("13_if74u")]
 unique_name_in_owner = true
@@ -104,3 +108,6 @@ unique_name_in_owner = true
 [node name="Pole" parent="." instance=ExtResource("14_cvvpo")]
 unique_name_in_owner = true
 position = Vector2(-21, -3)
+
+[node name="Kiste" parent="." instance=ExtResource("15_dcfn3")]
+position = Vector2(-1810, -18)

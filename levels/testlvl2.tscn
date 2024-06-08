@@ -10,10 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://desc5w62oyqfi" path="res://props/connector/connector.tscn" id="7_ud36q"]
 [ext_resource type="PackedScene" uid="uid://d06k0iiax55p6" path="res://props/Busch/busch.tscn" id="8_k1bbo"]
 [ext_resource type="PackedScene" uid="uid://ofp2ksjj0qxe" path="res://props/Katze/katze.tscn" id="9_vt5hg"]
-[ext_resource type="PackedScene" path="res://props/Haus/haus2.tscn" id="11_u3b4n"]
-[ext_resource type="PackedScene" path="res://props/Haus/haus3.tscn" id="12_rmn5v"]
-[ext_resource type="PackedScene" path="res://props/Haus/haus4.tscn" id="13_ejn0y"]
-[ext_resource type="PackedScene" path="res://props/Haus/haus5.tscn" id="14_du2hd"]
+[ext_resource type="PackedScene" uid="uid://dg7xqp2545cv6" path="res://props/Haus/haus2.tscn" id="11_u3b4n"]
+[ext_resource type="PackedScene" uid="uid://dnf1omyvi8q4q" path="res://props/Haus/haus3.tscn" id="12_rmn5v"]
+[ext_resource type="PackedScene" uid="uid://b1k66fp3jkfmy" path="res://props/Haus/haus4.tscn" id="13_ejn0y"]
+[ext_resource type="PackedScene" uid="uid://c1yjandhk81ju" path="res://props/Haus/haus5.tscn" id="14_du2hd"]
 
 [node name="TestLevel2" type="Node2D" node_paths=PackedStringArray("midpoint")]
 script = ExtResource("1_7u7sm")
