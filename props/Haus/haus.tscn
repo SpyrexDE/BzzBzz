@@ -71,9 +71,6 @@ script = ExtResource("1_10jd8")
 
 [node name="haus_gemeinsamkeiten" parent="." instance=ExtResource("2_w0gq1")]
 
-[node name="Light" parent="haus_gemeinsamkeiten" index="2"]
-energy = 0.0
-
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(66.75, -13.75)
 polygon = PackedVector2Array(-83.75, 29.75, -85.75, -178.25, 86.25, -176.25, 84.25, 185.75, -85.75, 189.75, -217.75, 153.75, -221.75, 25.75)
