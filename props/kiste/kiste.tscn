@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://blhl3st23e63b"]
+
+[ext_resource type="Texture2D" uid="uid://dnltvvcfgmtk" path="res://Kiste.png" id="1_mgjn0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vhbhw"]
+size = Vector2(28, 28)
+
+[node name="Kiste" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mgjn0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_vhbhw")
