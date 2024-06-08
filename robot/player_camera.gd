@@ -40,6 +40,7 @@ func _physics_process(delta: float) -> void:
 	#print(extra_zoom, zoom_accel, distance, pos, %Cam.global_position)
 	
 	%Cam.zoom = base_zoom + extra_zoom
+	_process_shake(delta)
 
 func _process_shake(delta) -> void:
 	# Lerp to normal position/rotation
