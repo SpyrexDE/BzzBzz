@@ -4,6 +4,7 @@ class_name Player
 @export var speed: float
 @export var friction: float
 @export var steering_speed: float
+@export var push_force = 80.0
 
 var friction_multiplier: float = 1.0
 
@@ -21,3 +22,10 @@ func _physics_process(_delta):
 	velocity = velocity / total_friction
 
 	move_and_slide()
+	do_physics()
+
+func do_physics() -> void:
+	for i in get_slide_collision_count():
+		var c = get_slide_collision(i)
+		if c.get_collider() is RigidBody2D:
+			c.get_collider().apply_central_impulse(-c.get_normal() * push_force)
