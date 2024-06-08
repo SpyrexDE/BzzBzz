@@ -1,7 +1,5 @@
 extends Node
 
-@export var movement_lerp_speed: float = 5.0
-
 @onready var player: Player = get_parent()
 @onready var base_zoom: Vector2 = %Cam.zoom
 @onready var min_zoom := Vector2(0.05, 0.05)
@@ -27,8 +25,9 @@ func _physics_process(delta: float) -> void:
 		return
 	
 	# Position
-	var pos = %Cam.global_position.lerp((player.global_position + Globals.level.midpoint.global_position) / 2, delta * movement_lerp_speed)
-	%Cam.global_position = pos
+	var pos = (player.global_position + Globals.level.midpoint.global_position) / 2
+	%Cam.offset = pos
+	print(%Cam.global_position)
 	
 	# Zoom
 	zoom_accel = zoom_accel / 2.0
