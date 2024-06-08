@@ -1,9 +1,10 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://bhh4k47j0pu7k"]
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://g0f8ygs614gt"]
 
 [ext_resource type="Texture2D" uid="uid://82lkh8a08r76" path="res://allSprites_default.png" id="1_fs6si"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8txvf"]
 texture = ExtResource("1_fs6si")
+texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1225,4 +1226,5 @@ texture = ExtResource("1_fs6si")
 34:34/0 = 0
 
 [resource]
+tile_size = Vector2i(64, 64)
 sources/0 = SubResource("TileSetAtlasSource_8txvf")

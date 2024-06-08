@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://ofp2ksjj0qxe"]
+
+[ext_resource type="Texture2D" uid="uid://bs3dite8xvbwm" path="res://KittyCat.png" id="1_1g0bt"]
+
+[node name="Katze" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(242, 102)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_1g0bt")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(0.5, 0.5)
+polygon = PackedVector2Array(374, 163, 447, 109, 480, 93, 498, 45, 520, 33, 560, 30, 594, 40, 581, 94, 578, 133, 540, 179, 520, 203, 465, 237, 465, 255, 376, 282, 340, 287, 309, 317, 316, 333, 355, 344, 358, 357, 345, 372, 294, 375, 259, 343, 257, 305, 274, 278, 316, 246)
