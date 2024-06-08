@@ -11,9 +11,11 @@ script = ExtResource("1_q7iwh")
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(-1, 10.4063)
+scale = Vector2(2, 2)
 polygon = PackedVector2Array(-70, -31.4063, -80, -66.4063, -62, -92.4063, -37, -103.406, -15, -100.406, 5, -84.4063, 19, -75.4063, 58, -56.4063, 73, -32.4063, 78, -13.4063, 77, 9.5937, 57, 43.5937, 13, 66.5937, -30, 64.5937, -52, 43.5937, -63, 5.5937, -62, -20.4063)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
 texture = ExtResource("1_c8gf7")
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -23,6 +25,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D2" type="CollisionPolygon2D" parent="Area2D"]
 position = Vector2(-1, 10.4063)
+scale = Vector2(2, 2)
 polygon = PackedVector2Array(-70, -31.4063, -80, -66.4063, -62, -92.4063, -37, -103.406, -15, -100.406, 5, -84.4063, 19, -75.4063, 58, -56.4063, 73, -32.4063, 78, -13.4063, 77, 9.5937, 57, 43.5937, 13, 66.5937, -30, 64.5937, -52, 43.5937, -63, 5.5937, -62, -20.4063)
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
