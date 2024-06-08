@@ -1,7 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://df5of3d13bhab"]
+[gd_scene load_steps=19 format=3 uid="uid://df5of3d13bhab"]
 
 [ext_resource type="Texture2D" uid="uid://gc77nf4be2q6" path="res://IMG_0141.webp" id="1_n45nw"]
 [ext_resource type="Script" path="res://ui/main_menu.gd" id="1_wr28q"]
+[ext_resource type="Texture2D" uid="uid://baebpvbkl2owd" path="res://IMG_0150.png" id="3_mx68w"]
+[ext_resource type="Texture2D" uid="uid://dblk0fgyxp8h" path="res://IMG_0151.png" id="4_13s5m"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_prkdc"]
 load_path = "res://.godot/imported/IMG_0141.webp-5bc5dec585e961a519a3b1ae616f4cae.ctex"
@@ -62,32 +64,43 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_wr28q")
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+[node name="StartButton" type="TextureButton" parent="."]
 layout_mode = 2
-
-[node name="StartButton" type="TextureButton" parent="CenterContainer/VBoxContainer"]
-layout_mode = 2
+offset_left = 416.0
+offset_top = 349.0
+offset_right = 850.0
+offset_bottom = 454.0
+scale = Vector2(0.71, 0.71)
 mouse_default_cursor_shape = 2
 texture_normal = SubResource("AtlasTexture_6th4r")
 texture_pressed = SubResource("AtlasTexture_p54jr")
 texture_hover = SubResource("AtlasTexture_tf5e2")
 texture_disabled = SubResource("AtlasTexture_hijdy")
+stretch_mode = 6
 
-[node name="StartButton2" type="TextureButton" parent="CenterContainer/VBoxContainer"]
+[node name="StartButton2" type="TextureButton" parent="."]
 layout_mode = 2
+offset_left = 416.0
+offset_top = 458.0
+offset_right = 850.0
+offset_bottom = 566.0
+scale = Vector2(0.71, 0.71)
 mouse_default_cursor_shape = 2
 texture_normal = SubResource("AtlasTexture_rjcsw")
 texture_pressed = SubResource("AtlasTexture_qroyi")
 texture_hover = SubResource("AtlasTexture_uhxhf")
 texture_disabled = SubResource("AtlasTexture_jj7p8")
+stretch_mode = 6
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/StartButton2" to="." method="_on_start_button_2_pressed"]
+[node name="Img0150" type="Sprite2D" parent="."]
+position = Vector2(610, 339)
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("3_mx68w")
+
+[node name="Img0151" type="Sprite2D" parent="."]
+position = Vector2(879, 383)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_13s5m")
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="StartButton2" to="." method="_on_start_button_2_pressed"]
