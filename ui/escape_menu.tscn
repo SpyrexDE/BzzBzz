@@ -63,6 +63,7 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0.286275)
 
 [node name="StayButton" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 384.0
 offset_top = 222.0
 offset_right = 818.0
@@ -73,6 +74,7 @@ texture_pressed = SubResource("AtlasTexture_v0br0")
 texture_hover = SubResource("AtlasTexture_f7v0m")
 
 [node name="BackButton" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 384.0
 offset_top = 358.0
 offset_right = 819.0

@@ -7,6 +7,21 @@
 atlas = ExtResource("1_nq8nv")
 region = Rect2(1065, 11, 723, 174)
 
+[sub_resource type="Animation" id="Animation_yc0v7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture:region")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(1065, 11, 723, 174)]
+}
+
 [sub_resource type="Animation" id="Animation_wff2g"]
 resource_name = "flicker"
 length = 0.4
@@ -22,21 +37,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [Rect2(1065, 11, 723, 174), Rect2(1065, 399, 723, 174)]
-}
-
-[sub_resource type="Animation" id="Animation_yc0v7"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:texture:region")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Rect2(1065, 11, 723, 174)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tcdv5"]
@@ -90,6 +90,7 @@ libraries = {
 autoplay = "flicker"
 
 [node name="BackButton" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 232.0
 offset_top = 340.0
 offset_right = 881.0
