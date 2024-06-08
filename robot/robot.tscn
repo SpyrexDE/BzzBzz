@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b1gg5e8kp4384"]
+[gd_scene load_steps=7 format=3 uid="uid://b1gg5e8kp4384"]
 
 [ext_resource type="Script" path="res://robot/robot.gd" id="1_qe1k2"]
 [ext_resource type="Texture2D" uid="uid://bwsxfxob8linx" path="res://robot.png" id="2_1nmmk"]
 [ext_resource type="PackedScene" uid="uid://dalopp2ns8t8d" path="res://robot/player_camera.tscn" id="3_xdevb"]
+[ext_resource type="Texture2D" uid="uid://cq2tvojinwnb7" path="res://light.png" id="4_gperx"]
+[ext_resource type="Texture2D" uid="uid://c8w0i6ek6t1hy" path="res://lightcone.png" id="5_frlkx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o10pc"]
 radius = 65.192
@@ -23,3 +25,21 @@ texture = ExtResource("2_1nmmk")
 shape = SubResource("CircleShape2D_o10pc")
 
 [node name="PlayerCamera" parent="." instance=ExtResource("3_xdevb")]
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_gperx")
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(-1.35718, -0.619934)
+rotation = 3.14159
+scale = Vector2(2, 2)
+texture = ExtResource("5_frlkx")
+offset = Vector2(8, 70)
+
+[node name="PointLight2D3" type="PointLight2D" parent="."]
+position = Vector2(17.076, -25.6705)
+rotation = 3.14159
+scale = Vector2(2, 2)
+texture = ExtResource("5_frlkx")
+offset = Vector2(-1.73, 56.31)
