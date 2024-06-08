@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://bh4y57fljt8t1"]
+[gd_scene load_steps=7 format=3 uid="uid://bh4y57fljt8t1"]
 
+[ext_resource type="Script" path="res://props/HausGemeinsamkeiten/haus_gemeinsamkeiten.gd" id="1_4mdgx"]
 [ext_resource type="Shader" path="res://props/Haus/haus.gdshader" id="1_eu3v8"]
 [ext_resource type="Texture2D" uid="uid://bc7pl5rp5037s" path="res://Haus1.png" id="2_elqwq"]
 
@@ -27,6 +28,7 @@ radius = 401.125
 [node name="haus_gemeinsamkeiten" type="Node2D"]
 position = Vector2(-1.49998, 4.49998)
 scale = Vector2(2.82368, 2.35948)
+script = ExtResource("1_4mdgx")
 
 [node name="ShaderSprite" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_cuvbs")
@@ -47,6 +49,10 @@ texture = ExtResource("2_elqwq")
 material = SubResource("ShaderMaterial_nsqj8")
 position = Vector2(0.531215, -1.90719)
 scale = Vector2(0.354148, 0.423822)
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_eg6st")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
