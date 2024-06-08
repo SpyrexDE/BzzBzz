@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://soxhgdm3pl15"]
+
+[ext_resource type="Texture2D" uid="uid://cq2tvojinwnb7" path="res://light.png" id="1_voc3c"]
+[ext_resource type="Texture2D" uid="uid://o8o4yx0b61bx" path="res://icon.svg" id="2_masvi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5ofs2"]
+
+[node name="Lantern" type="StaticBody2D"]
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+scale = Vector2(5, 5)
+texture = ExtResource("1_voc3c")
+texture_scale = 0.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_5ofs2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+texture = ExtResource("2_masvi")
