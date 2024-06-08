@@ -21,7 +21,7 @@ position = Vector2(1390, 80)
 unique_name_in_owner = true
 
 [node name="midpoint" type="Node2D" parent="."]
-position = Vector2(371, 238)
+position = Vector2(1118, 1176)
 
 [node name="Zap" parent="." instance=ExtResource("5_s8uj7")]
 
@@ -30,3 +30,6 @@ position = Vector2(-400, 1233)
 
 [node name="Haus3" parent="." instance=ExtResource("2_qns4n")]
 position = Vector2(2514, 1521)
+
+[node name="Haus4" parent="." instance=ExtResource("2_qns4n")]
+position = Vector2(772, 2147)

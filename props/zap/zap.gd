@@ -16,14 +16,25 @@ func _ready():
 	checkpoint_n += 1
 	last_checkpoint = connector.checkpoints[0]
 
+func kill():
+	print("dead")
+	dead = true
+	Globals.camera.add_stress(2)
+
 func _physics_process(_delta):
 	if (dead):
 		return
+		
+	for intersection in connector.intersection_points:
+		if (position - intersection).length() < 20:
+			kill()
+			return
+	
 	dist_from_last += speed
 
 	#is at checkpoint
 	if len(connector.checkpoints) > checkpoint_n:
-		if (position - connector.checkpoints[checkpoint_n]).length() < 10:
+		if (position - connector.checkpoints[checkpoint_n]).length() < 20:
 			last_checkpoint = connector.checkpoints[checkpoint_n]
 			checkpoint_n += 1
 			dist_from_last = 0
@@ -37,6 +48,4 @@ func _physics_process(_delta):
 			var dir = (connector.robot.position - connector.checkpoints[- 1]).normalized()
 			position = connector.checkpoints[- 1] + dir * dist_from_last
 		else:
-			print("dead")
-			dead = true
-			Globals.camera.add_stress(2)
+			kill()
