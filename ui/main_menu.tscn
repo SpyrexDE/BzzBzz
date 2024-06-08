@@ -1,0 +1,93 @@
+[gd_scene load_steps=17 format=3 uid="uid://df5of3d13bhab"]
+
+[ext_resource type="Texture2D" uid="uid://gc77nf4be2q6" path="res://IMG_0141.webp" id="1_n45nw"]
+[ext_resource type="Script" path="res://ui/main_menu.gd" id="1_wr28q"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3s7gp"]
+load_path = "res://.godot/imported/IMG_0141.webp-5bc5dec585e961a519a3b1ae616f4cae.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6th4r"]
+atlas = SubResource("CompressedTexture2D_3s7gp")
+region = Rect2(621, 184, 434, 105)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dffql"]
+load_path = "res://.godot/imported/IMG_0141.webp-5bc5dec585e961a519a3b1ae616f4cae.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p54jr"]
+atlas = SubResource("CompressedTexture2D_dffql")
+region = Rect2(614, 374, 434, 108)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3hadn"]
+load_path = "res://.godot/imported/IMG_0141.webp-5bc5dec585e961a519a3b1ae616f4cae.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tf5e2"]
+atlas = SubResource("CompressedTexture2D_3hadn")
+region = Rect2(621, 515, 439, 105)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hijdy"]
+atlas = ExtResource("1_n45nw")
+region = Rect2(621, 184, 434, 105)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5pglf"]
+load_path = "res://.godot/imported/IMG_0141.webp-5bc5dec585e961a519a3b1ae616f4cae.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rjcsw"]
+atlas = SubResource("CompressedTexture2D_5pglf")
+region = Rect2(139, 525, 434, 108)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5qg5m"]
+load_path = "res://.godot/imported/IMG_0141.webp-5bc5dec585e961a519a3b1ae616f4cae.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qroyi"]
+atlas = SubResource("CompressedTexture2D_5qg5m")
+region = Rect2(139, 311, 435, 105)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_unhoy"]
+load_path = "res://.godot/imported/IMG_0141.webp-5bc5dec585e961a519a3b1ae616f4cae.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uhxhf"]
+atlas = SubResource("CompressedTexture2D_unhoy")
+region = Rect2(138, 179, 438, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jj7p8"]
+atlas = ExtResource("1_n45nw")
+region = Rect2(139, 525, 434, 108)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wr28q")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="StartButton" type="TextureButton" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = SubResource("AtlasTexture_6th4r")
+texture_pressed = SubResource("AtlasTexture_p54jr")
+texture_hover = SubResource("AtlasTexture_tf5e2")
+texture_disabled = SubResource("AtlasTexture_hijdy")
+
+[node name="StartButton2" type="TextureButton" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = SubResource("AtlasTexture_rjcsw")
+texture_pressed = SubResource("AtlasTexture_qroyi")
+texture_hover = SubResource("AtlasTexture_uhxhf")
+texture_disabled = SubResource("AtlasTexture_jj7p8")
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/StartButton2" to="." method="_on_start_button_2_pressed"]

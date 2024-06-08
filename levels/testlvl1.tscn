@@ -12,7 +12,7 @@ midpoint = NodePath("midpoint")
 
 [node name="Robot" parent="." instance=ExtResource("1_vcimh")]
 unique_name_in_owner = true
-position = Vector2(151, 231)
+position = Vector2(1216, 1189)
 
 [node name="Haus" parent="." instance=ExtResource("2_qns4n")]
 position = Vector2(1390, 80)
@@ -30,4 +30,4 @@ position = Vector2(77, 77)
 position = Vector2(-400, 1233)
 
 [node name="Haus3" parent="." instance=ExtResource("2_qns4n")]
-position = Vector2(2478, 1551)
+position = Vector2(2514, 1521)

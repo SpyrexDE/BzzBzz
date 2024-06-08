@@ -19,6 +19,9 @@ var shake: float = 0.0
 var extra_zoom := Vector2.ZERO
 var zoom_accel := Vector2.ZERO
 
+func _ready() -> void:
+	Globals.camera = self
+
 func _physics_process(delta: float) -> void:
 	if not Globals.level:
 		return
@@ -37,6 +40,7 @@ func _physics_process(delta: float) -> void:
 	#print(extra_zoom, zoom_accel, distance, pos, %Cam.global_position)
 	
 	%Cam.zoom = base_zoom + extra_zoom
+	_process_shake(delta)
 
 func _process_shake(delta) -> void:
 	# Lerp to normal position/rotation
