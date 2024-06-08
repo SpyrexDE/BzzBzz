@@ -14,6 +14,7 @@ glow_blend_mode = 1
 [node name="Testlvl3" type="Node2D" node_paths=PackedStringArray("midpoint")]
 script = ExtResource("1_5ux8n")
 midpoint = NodePath("Midpoint")
+start_delay = null
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(5, 5)
