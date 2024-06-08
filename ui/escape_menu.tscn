@@ -45,6 +45,7 @@ atlas = SubResource("CompressedTexture2D_uh4vl")
 region = Rect2(394, 1094, 444, 108)
 
 [node name="EscapeMenu" type="Control"]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

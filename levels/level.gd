@@ -4,7 +4,7 @@ class_name Level
 @export
 var midpoint: Node2D
 
-@export var start_delay: float
+@export var start_delay: float = 5.0
 
 func _ready() -> void:
 	Globals.level = self
