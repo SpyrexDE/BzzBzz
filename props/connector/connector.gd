@@ -1,5 +1,7 @@
 extends Node2D
 
+class_name Connector
+
 var robot
 var last_checkpoint: Vector2
 var checkpoints: Array[Vector2]
