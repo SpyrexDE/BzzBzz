@@ -10,7 +10,7 @@ extends Node
 @export var max_roll: float = 10.0
 @export var shakeReduction: float = 2.5
 
-@export var move_factor := 2.0
+@export var move_factor := 5.0
 
 var stress: float = 0.0
 var shake: float = 0.0
