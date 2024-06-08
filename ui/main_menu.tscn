@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://gc77nf4be2q6" path="res://IMG_0141.webp" id="1_n45nw"]
 [ext_resource type="Script" path="res://ui/main_menu.gd" id="1_wr28q"]
-[ext_resource type="Texture2D" uid="uid://baebpvbkl2owd" path="res://IMG_0150.png" id="3_mx68w"]
+[ext_resource type="Texture2D" uid="uid://cj1shdifyd5k" path="res://IMG_0153.png" id="3_f5216"]
 [ext_resource type="Texture2D" uid="uid://dblk0fgyxp8h" path="res://IMG_0151.png" id="4_13s5m"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_prkdc"]
@@ -95,7 +95,7 @@ stretch_mode = 6
 [node name="Img0150" type="Sprite2D" parent="."]
 position = Vector2(610, 339)
 scale = Vector2(0.33, 0.33)
-texture = ExtResource("3_mx68w")
+texture = ExtResource("3_f5216")
 
 [node name="Img0151" type="Sprite2D" parent="."]
 position = Vector2(879, 383)
