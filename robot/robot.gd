@@ -30,8 +30,6 @@ func _physics_process(_delta):
 		%Connector.add_checkpoint(haus.position)
 		haus.is_connected_to_cable = true
 
-	queue_redraw()
-
 func do_physics() -> void:
 	for i in get_slide_collision_count():
 		var c = get_slide_collision(i)
@@ -40,6 +38,3 @@ func do_physics() -> void:
 
 func set_house(new_haus: Haus) -> void:
 	haus = new_haus
-
-func _draw():
-	draw_line(Vector2(0, 0), Vector2(0, -200), Color.BLUE, 20)
