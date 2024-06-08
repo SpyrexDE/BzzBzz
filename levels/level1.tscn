@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://c1dxd27ews2cu" path="res://props/Hecke/hecke.tscn" id="10_iybvb"]
 [ext_resource type="PackedScene" uid="uid://ofp2ksjj0qxe" path="res://props/Katze/katze.tscn" id="11_bgx2t"]
 [ext_resource type="PackedScene" uid="uid://soxhgdm3pl15" path="res://props/lantern/lantern.tscn" id="12_ynx8o"]
-[ext_resource type="PackedScene" uid="uid://blfekpuyeahq5" path="res://props/label.tscn" id="13_74eyg"]
+[ext_resource type="PackedScene" uid="uid://bdwx4lrmpiodp" path="res://props/label.tscn" id="13_74eyg"]
 
 [sub_resource type="Environment" id="Environment_kpoq8"]
 background_mode = 3
@@ -24,6 +24,7 @@ glow_blend_mode = 1
 [node name="leveltutorial" type="Node2D" node_paths=PackedStringArray("midpoint")]
 script = ExtResource("1_yagak")
 midpoint = NodePath("Midpoint")
+start_delay = 3.0
 
 [node name="Robot" parent="." instance=ExtResource("4_xano1")]
 unique_name_in_owner = true
