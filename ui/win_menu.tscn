@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://b4l2lqwgr5fay"]
+[gd_scene load_steps=12 format=3 uid="uid://b4l2lqwgr5fay"]
 
 [ext_resource type="Texture2D" uid="uid://bg154f66gstvv" path="res://IMG_0145.png" id="1_2y6we"]
 [ext_resource type="Script" path="res://ui/win_menu.gd" id="1_io4up"]
+[ext_resource type="FontFile" uid="uid://cyat7w5sb3vll" path="res://woodcutter Electric.ttf" id="3_ib3yv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7xu8p"]
 atlas = ExtResource("1_2y6we")
@@ -57,6 +58,13 @@ region = Rect2(282, 625, 723, 174)
 atlas = ExtResource("1_2y6we")
 region = Rect2(282, 359, 732, 183)
 
+[sub_resource type="LabelSettings" id="LabelSettings_38liv"]
+font = ExtResource("3_ib3yv")
+font_size = 66
+font_color = Color(0, 0, 0, 1)
+outline_size = 20
+outline_color = Color(1, 1, 0, 1)
+
 [node name="WinMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -69,9 +77,9 @@ script = ExtResource("1_io4up")
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = 212.0
-offset_top = 102.0
+offset_top = 138.0
 offset_right = 939.0
-offset_bottom = 276.0
+offset_bottom = 312.0
 texture = SubResource("AtlasTexture_7xu8p")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect"]
@@ -90,5 +98,15 @@ mouse_default_cursor_shape = 2
 texture_normal = SubResource("AtlasTexture_t515i")
 texture_pressed = SubResource("AtlasTexture_bfyqd")
 texture_hover = SubResource("AtlasTexture_28s2g")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 340.0
+offset_top = 17.0
+offset_right = 839.0
+offset_bottom = 108.0
+text = "SCORE: 999"
+label_settings = SubResource("LabelSettings_38liv")
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]

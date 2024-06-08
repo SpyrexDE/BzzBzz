@@ -53,6 +53,7 @@ texture = ExtResource("1_jk435")
 expand_mode = 2
 
 [node name="StartButton" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 348.0
 offset_top = 459.0
 offset_right = 782.0
