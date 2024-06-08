@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://4541kxcs1p1m"]
+[gd_scene load_steps=17 format=3 uid="uid://4541kxcs1p1m"]
 
 [ext_resource type="Script" path="res://levels/level.gd" id="1_gibkr"]
 [ext_resource type="TileSet" uid="uid://g0f8ygs614gt" path="res://tileset.tres" id="2_lr2wb"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dd4pjpgedovfg" path="res://props/Hinderniss_Wasser/wasser_teich.tscn" id="11_rt8tl"]
 [ext_resource type="PackedScene" uid="uid://ofp2ksjj0qxe" path="res://props/Katze/katze.tscn" id="12_plljg"]
 [ext_resource type="PackedScene" uid="uid://vqts8ef4u5h5" path="res://props/zap/zap.tscn" id="13_if74u"]
+[ext_resource type="PackedScene" uid="uid://wt5tsi27by3d" path="res://props/pole/pole.tscn" id="14_cvvpo"]
 
 [sub_resource type="Environment" id="Environment_fkbrj"]
 background_mode = 3
@@ -83,18 +84,23 @@ position = Vector2(1531, 112)
 position = Vector2(-2015, -944)
 
 [node name="busch" parent="." instance=ExtResource("8_chk7u")]
-position = Vector2(-103, 505)
+position = Vector2(177, 817)
 
 [node name="Fels" parent="." instance=ExtResource("9_x0pee")]
-position = Vector2(-690, 665)
+position = Vector2(-882, 593)
 
 [node name="Hecke" parent="." instance=ExtResource("10_xjga3")]
-position = Vector2(-2186, -723)
+position = Vector2(-1338, -35)
 
 [node name="Wasser_Teich" parent="." instance=ExtResource("11_rt8tl")]
-position = Vector2(-243, -700)
+position = Vector2(-233, -498)
 
 [node name="Katze" parent="." instance=ExtResource("12_plljg")]
-position = Vector2(646, 241)
+position = Vector2(622, -15)
 
 [node name="Zap" parent="." instance=ExtResource("13_if74u")]
+unique_name_in_owner = true
+
+[node name="Pole" parent="." instance=ExtResource("14_cvvpo")]
+unique_name_in_owner = true
+position = Vector2(-21, -3)
