@@ -52,3 +52,4 @@ interact={
 [rendering]
 
 environment/defaults/default_clear_color=Color(0.10228, 0.0781511, 0.129688, 1)
+anti_aliasing/quality/msaa_2d=1
