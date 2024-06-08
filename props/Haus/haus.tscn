@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://cswjddao7c7gd"]
 
-[ext_resource type="Script" path="res://props/haus.gd" id="1_10jd8"]
+[ext_resource type="Script" path="res://props/Haus/haus.gd" id="1_10jd8"]
 [ext_resource type="Texture2D" uid="uid://bc7pl5rp5037s" path="res://Haus1.png" id="2_fohcu"]
-[ext_resource type="Shader" path="res://props/haus.gdshader" id="3_46c6f"]
+[ext_resource type="Shader" path="res://props/Haus/haus.gdshader" id="3_46c6f"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_v57pw"]
 

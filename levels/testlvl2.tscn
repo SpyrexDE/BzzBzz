@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://levels/level.gd" id="1_7u7sm"]
 [ext_resource type="PackedScene" uid="uid://b1gg5e8kp4384" path="res://robot/robot.tscn" id="1_qiamr"]
-[ext_resource type="PackedScene" uid="uid://cswjddao7c7gd" path="res://props/haus.tscn" id="2_lykm4"]
+[ext_resource type="PackedScene" uid="uid://cswjddao7c7gd" path="res://props/Haus/haus.tscn" id="2_lykm4"]
 [ext_resource type="PackedScene" uid="uid://dd4pjpgedovfg" path="res://props/Hinderniss_Wasser/wasser_teich.tscn" id="3_o1ddo"]
 [ext_resource type="PackedScene" uid="uid://c1dxd27ews2cu" path="res://props/Hecke/hecke.tscn" id="4_r43wu"]
 [ext_resource type="PackedScene" uid="uid://blhl3st23e63b" path="res://props/kiste/kiste.tscn" id="5_svl15"]
