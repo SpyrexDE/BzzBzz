@@ -21,10 +21,11 @@ position = Vector2(342, 23)
 position = Vector2(49, 293)
 rotation = 1.5708
 
-[node name="Kiste" parent="." instance=ExtResource("5_svl15")]
-position = Vector2(689, -147)
-scale = Vector2(5, 5)
-
 [node name="Fels" parent="." instance=ExtResource("6_fwqom")]
 position = Vector2(408, -212)
 scale = Vector2(2, 2)
+
+[node name="Kiste" parent="." instance=ExtResource("5_svl15")]
+position = Vector2(670, -37)
+
+[node name="Midpoint" type="Node2D" parent="."]

@@ -4,14 +4,13 @@ var robot
 var last_checkpoint: Vector2
 var checkpoints: Array[Vector2]
 var debug_points: Array[Vector2]
-var debug_points_temp: Array[Vector2]
 
 func _ready():
 	checkpoints.append(Vector2(0, 0))
 	robot = %Robot
 
 func add_checkpoint(new_checkpoint: Vector2) -> bool:
-	debug_points_temp.clear()
+
 	var last = checkpoints[0]
 	for checkpoint in checkpoints:
 		#get the point of intersection
@@ -22,29 +21,22 @@ func add_checkpoint(new_checkpoint: Vector2) -> bool:
 			#check if it is a self intersection
 			if (intersection - checkpoints[- 1]).length() >= 1:
 				#check if intersection is on the line segment
-				var a = checkpoints[- 1]
-				var b = new_checkpoint
+				var a = last
+				var b = checkpoint - last
 				var c = intersection
 
-				var aa = last
-				var bb = checkpoint
-
-				var ac = (c - a).normalized()
-				var bc = (c - b).normalized()
-				
-				var aac = (c - aa).normalized()
-				var bbc = (c - bb).normalized()
+				var ac = c - a
+				var bc = b - c
 
 				var x = ac.dot(bc)
-				var xx = aac.dot(bbc)
-
-				if (x < 0&&xx < 0):
+				print("dot prod ", x)
+				if (x > 0):
+					print(intersection)
 					debug_points.append(intersection)
 
 		last = checkpoint
 
 	checkpoints.append(new_checkpoint)
-	print("----")
 	return true
 
 func _physics_process(_delta):

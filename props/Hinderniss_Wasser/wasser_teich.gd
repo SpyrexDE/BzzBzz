@@ -13,5 +13,12 @@ func _process(delta):
 
 
 func _on_area_2d_body_entered(body):
-	print("slower")
+	if body is Player:
+			body.friction_multiplier = 2
 	pass # Replace with function body.
+	
+	
+func _on_area_2d_body_exited(body):
+	if body is Player:
+		body.friction_multiplier = 1
+	pass

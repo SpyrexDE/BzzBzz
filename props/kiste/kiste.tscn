@@ -5,10 +5,14 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vhbhw"]
 size = Vector2(28, 28)
 
-[node name="Kiste" type="StaticBody2D"]
+[node name="Kiste" type="RigidBody2D"]
+mass = 0.01
+linear_damp = 7.141
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
 texture = ExtResource("1_mgjn0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_vhbhw")
