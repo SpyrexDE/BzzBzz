@@ -1,0 +1,86 @@
+[gd_scene load_steps=14 format=3 uid="uid://6qk333npept3"]
+
+[ext_resource type="Script" path="res://ui/escape_menu.gd" id="1_idmir"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rvu0i"]
+load_path = "res://.godot/imported/IMG_0141.webp-5bc5dec585e961a519a3b1ae616f4cae.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwvky"]
+atlas = SubResource("CompressedTexture2D_rvu0i")
+region = Rect2(638, 0, 435, 111)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vrn51"]
+load_path = "res://.godot/imported/IMG_0141.webp-5bc5dec585e961a519a3b1ae616f4cae.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v0br0"]
+atlas = SubResource("CompressedTexture2D_vrn51")
+region = Rect2(83, 6, 434, 105)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_x75lj"]
+load_path = "res://.godot/imported/IMG_0141.webp-5bc5dec585e961a519a3b1ae616f4cae.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7v0m"]
+atlas = SubResource("CompressedTexture2D_x75lj")
+region = Rect2(438, 731, 439, 105)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qfl4y"]
+load_path = "res://.godot/imported/IMG_0141.webp-5bc5dec585e961a519a3b1ae616f4cae.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbmbq"]
+atlas = SubResource("CompressedTexture2D_qfl4y")
+region = Rect2(614, 945, 434, 108)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_oe80q"]
+load_path = "res://.godot/imported/IMG_0141.webp-5bc5dec585e961a519a3b1ae616f4cae.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6khvi"]
+atlas = SubResource("CompressedTexture2D_oe80q")
+region = Rect2(138, 945, 434, 105)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uh4vl"]
+load_path = "res://.godot/imported/IMG_0141.webp-5bc5dec585e961a519a3b1ae616f4cae.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hyw8x"]
+atlas = SubResource("CompressedTexture2D_uh4vl")
+region = Rect2(394, 1094, 444, 108)
+
+[node name="EscapeMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_idmir")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.286275)
+
+[node name="StayButton" type="TextureButton" parent="."]
+offset_left = 384.0
+offset_top = 222.0
+offset_right = 818.0
+offset_bottom = 327.0
+mouse_default_cursor_shape = 2
+texture_normal = SubResource("AtlasTexture_gwvky")
+texture_pressed = SubResource("AtlasTexture_v0br0")
+texture_hover = SubResource("AtlasTexture_f7v0m")
+
+[node name="BackButton" type="TextureButton" parent="."]
+offset_left = 384.0
+offset_top = 358.0
+offset_right = 819.0
+offset_bottom = 469.0
+mouse_default_cursor_shape = 2
+texture_normal = SubResource("AtlasTexture_rbmbq")
+texture_pressed = SubResource("AtlasTexture_6khvi")
+texture_hover = SubResource("AtlasTexture_hyw8x")
+
+[connection signal="pressed" from="StayButton" to="." method="_on_stay_button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

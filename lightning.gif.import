@@ -1,0 +1,15 @@
+[remap]
+
+importer="import_gif_to_sprite_frames"
+type="SpriteFrames"
+uid="uid://li7etfn6w173"
+path="res://.godot/imported/lightning.gif-da2c119ded97955614512bc8f809eae1.tres"
+
+[deps]
+
+source_file="res://lightning.gif"
+dest_files=["res://.godot/imported/lightning.gif-da2c119ded97955614512bc8f809eae1.tres"]
+
+[params]
+
+frames_per_second=30

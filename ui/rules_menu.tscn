@@ -1,0 +1,66 @@
+[gd_scene load_steps=11 format=3 uid="uid://bil6vgvrdovg1"]
+
+[ext_resource type="Script" path="res://ui/rules_menu.gd" id="1_7vwjd"]
+[ext_resource type="Texture2D" uid="uid://bwvm1f85gvpjw" path="res://IMG_0144.webp" id="1_jk435"]
+[ext_resource type="Texture2D" uid="uid://gc77nf4be2q6" path="res://IMG_0141.webp" id="2_k7mgw"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3s7gp"]
+load_path = "res://.godot/imported/IMG_0141.webp-5bc5dec585e961a519a3b1ae616f4cae.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kcc5m"]
+atlas = SubResource("CompressedTexture2D_3s7gp")
+region = Rect2(621, 184, 434, 105)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dffql"]
+load_path = "res://.godot/imported/IMG_0141.webp-5bc5dec585e961a519a3b1ae616f4cae.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3o42r"]
+atlas = SubResource("CompressedTexture2D_dffql")
+region = Rect2(614, 374, 434, 108)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3hadn"]
+load_path = "res://.godot/imported/IMG_0141.webp-5bc5dec585e961a519a3b1ae616f4cae.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4i3b1"]
+atlas = SubResource("CompressedTexture2D_3hadn")
+region = Rect2(621, 515, 439, 105)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0s3s7"]
+atlas = ExtResource("2_k7mgw")
+region = Rect2(621, 184, 434, 105)
+
+[node name="RulesMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7vwjd")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 616.89)
+layout_mode = 2
+texture = ExtResource("1_jk435")
+expand_mode = 2
+
+[node name="StartButton" type="TextureButton" parent="."]
+offset_left = 348.0
+offset_top = 459.0
+offset_right = 782.0
+offset_bottom = 564.0
+mouse_default_cursor_shape = 2
+texture_normal = SubResource("AtlasTexture_kcc5m")
+texture_pressed = SubResource("AtlasTexture_3o42r")
+texture_hover = SubResource("AtlasTexture_4i3b1")
+texture_disabled = SubResource("AtlasTexture_0s3s7")
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
