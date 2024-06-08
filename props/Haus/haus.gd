@@ -4,9 +4,6 @@ class_name Haus
 var strom := false
 var is_connected_to_cable := false
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
-	pass
 
 func _on_area_2d_body_entered(body):
 	if body is Player and !is_connected_to_cable:
