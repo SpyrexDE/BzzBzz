@@ -10,6 +10,7 @@ var intersection_points: Array[Vector2]
 func _ready():
 	checkpoints.append(Vector2(0, 0))
 	robot = %Robot
+	Globals.connector = self
 
 func add_checkpoint(new_checkpoint: Vector2) -> void:
 	var last = checkpoints[0]
@@ -53,7 +54,7 @@ func _draw():
 	for checkpoint in checkpoints:
 		draw_line(last, checkpoint, Color.GREEN * 1.5, 10.0)
 		last = checkpoint
-	draw_line(checkpoints[ - 1], robot.position, Color.TURQUOISE*1.5, 10.0)
+	draw_line(checkpoints[ - 1], robot.position, Color.TURQUOISE * 1.5, 10.0)
 
 	for debug_point in intersection_points:
 		draw_circle(debug_point, 10, Color.RED * 1.5)

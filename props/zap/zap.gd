@@ -11,7 +11,7 @@ var dist_from_last: float
 var last_checkpoint: Vector2
 
 func _ready():
-	connector = %Connector
+	connector = Globals.connector
 	dist_from_last = 0
 	checkpoint_n = 0
 	position = connector.checkpoints[checkpoint_n]
