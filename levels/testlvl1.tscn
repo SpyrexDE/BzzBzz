@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dahxw88ts6t6k"]
+[gd_scene load_steps=8 format=3 uid="uid://dahxw88ts6t6k"]
 
 [ext_resource type="PackedScene" uid="uid://b1gg5e8kp4384" path="res://robot/robot.tscn" id="1_vcimh"]
 [ext_resource type="Script" path="res://levels/level.gd" id="1_ysstf"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://desc5w62oyqfi" path="res://props/connector/connector.tscn" id="3_pgg6y"]
 [ext_resource type="PackedScene" uid="uid://vqts8ef4u5h5" path="res://props/zap/zap.tscn" id="5_s8uj7"]
 [ext_resource type="PackedScene" uid="uid://d06k0iiax55p6" path="res://props/Busch/busch.tscn" id="6_t3kf8"]
+[ext_resource type="PackedScene" uid="uid://m1f2y8cfvcd0" path="res://props/Fels/Fels.tscn" id="7_n10mv"]
 
 [node name="Testlvl1" type="Node2D" node_paths=PackedStringArray("midpoint")]
 script = ExtResource("1_ysstf")
@@ -37,3 +38,6 @@ position = Vector2(772, 2147)
 
 [node name="busch" parent="." instance=ExtResource("6_t3kf8")]
 position = Vector2(1963, 815)
+
+[node name="Fels" parent="." instance=ExtResource("7_n10mv")]
+position = Vector2(724, 1176)
