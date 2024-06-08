@@ -53,7 +53,7 @@ func _draw():
 	for checkpoint in checkpoints:
 		draw_line(last, checkpoint, Color.GREEN, 10.0)
 		last = checkpoint
-	draw_line(checkpoints[ - 1], robot.position, Color.GREEN, 10.0)
+	draw_line(checkpoints[ - 1], robot.position, Color.TURQUOISE*3.3, 10.0)
 
 	for debug_point in intersection_points:
 		draw_circle(debug_point, 10, Color.RED)

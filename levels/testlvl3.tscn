@@ -1,10 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://bpd2v5oesn30j"]
+[gd_scene load_steps=7 format=3 uid="uid://bpd2v5oesn30j"]
 
 [ext_resource type="Script" path="res://levels/level.gd" id="1_5ux8n"]
 [ext_resource type="PackedScene" uid="uid://cswjddao7c7gd" path="res://props/Haus/haus.tscn" id="1_w7b40"]
 [ext_resource type="PackedScene" uid="uid://b1gg5e8kp4384" path="res://robot/robot.tscn" id="2_tge7j"]
 [ext_resource type="TileSet" uid="uid://g0f8ygs614gt" path="res://tileset.tres" id="4_jhdhu"]
 [ext_resource type="PackedScene" uid="uid://desc5w62oyqfi" path="res://props/connector/connector.tscn" id="5_u4ypr"]
+
+[sub_resource type="Environment" id="Environment_4rlwh"]
+background_mode = 3
+glow_enabled = true
+glow_blend_mode = 1
 
 [node name="Testlvl3" type="Node2D" node_paths=PackedStringArray("midpoint")]
 script = ExtResource("1_5ux8n")
@@ -29,4 +34,7 @@ position = Vector2(239, 310)
 unique_name_in_owner = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.152024, 0.243695, 0.407987, 1)
+color = Color(0.0254495, 0.0593284, 0.123262, 1)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_4rlwh")

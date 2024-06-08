@@ -1,13 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://blhl3st23e63b"]
+[gd_scene load_steps=5 format=3 uid="uid://blhl3st23e63b"]
 
 [ext_resource type="Texture2D" uid="uid://dnltvvcfgmtk" path="res://Kiste.png" id="1_mgjn0"]
+[ext_resource type="Script" path="res://props/kiste/kiste.gd" id="1_oasxo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vhbhw"]
 size = Vector2(28, 28)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yma3n"]
+size = Vector2(80, 80)
+
 [node name="Kiste" type="RigidBody2D"]
 mass = 0.01
 linear_damp = 7.141
+script = ExtResource("1_oasxo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(3, 3)
@@ -16,3 +21,12 @@ texture = ExtResource("1_mgjn0")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_vhbhw")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_yma3n")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
