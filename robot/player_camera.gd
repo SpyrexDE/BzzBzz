@@ -26,7 +26,7 @@ func _physics_process(delta: float) -> void:
 		return
 	
 	# Position
-	var pos = (player.global_position + Globals.level.midpoint.global_position) / move_factor
+	var pos = Globals.level.midpoint.global_position + (player.global_position + Globals.level.midpoint.global_position) / move_factor
 	%Cam.offset = pos
 	#print(%Cam.global_position)
 	
