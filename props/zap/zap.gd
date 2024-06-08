@@ -3,6 +3,7 @@ extends Node2D
 @export var speed: float
 var connector: Connector
 var checkpoint_n: int
+var dead := false
 
 var dist_from_last: float
 var last_checkpoint: Vector2
@@ -16,6 +17,8 @@ func _ready():
 	last_checkpoint = connector.checkpoints[0]
 
 func _physics_process(_delta):
+	if (dead):
+		return
 	dist_from_last += speed
 
 	#is at checkpoint
@@ -30,9 +33,10 @@ func _physics_process(_delta):
 		var dir = (connector.checkpoints[checkpoint_n] - last_checkpoint).normalized()
 		position = last_checkpoint + dir * dist_from_last
 	else:
-		if (position - connector.robot.position).length() > 10:
+		if (position - connector.robot.position).length() > 20:
 			var dir = (connector.robot.position - connector.checkpoints[- 1]).normalized()
 			position = connector.checkpoints[- 1] + dir * dist_from_last
 		else:
 			print("dead")
-			Globals.camera.add_stress(50.0)
+			dead = true
+			Globals.camera.add_stress(2)
