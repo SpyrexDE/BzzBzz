@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://wt5tsi27by3d"]
+[gd_scene load_steps=8 format=3 uid="uid://wt5tsi27by3d"]
 
 [ext_resource type="Texture2D" uid="uid://dpmtoloofidks" path="res://props/pole/Ankerpunkt2.png" id="1_0lb4n"]
 [ext_resource type="Script" path="res://props/pole/pole.gd" id="1_nq07d"]
+[ext_resource type="AudioStream" uid="uid://b8ba8nwxgf2g" path="res://lightning-strike.mp3" id="2_7j3gh"]
 [ext_resource type="SpriteFrames" uid="uid://li7etfn6w173" path="res://lightning.gif" id="3_8aata"]
 
 [sub_resource type="Animation" id="Animation_havkm"]
@@ -90,6 +91,7 @@ _data = {
 
 [node name="Pole" type="Node2D"]
 script = ExtResource("1_nq07d")
+thundersound = ExtResource("2_7j3gh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(2.05304, 2.01392)
