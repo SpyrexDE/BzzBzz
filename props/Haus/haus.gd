@@ -14,7 +14,7 @@ func _on_area_2d_body_entered(body):
 	
 func lightup():
 	print("lighup")
-	$AnimationPlayer.play("haus_light_up")
+	$haus_gemeinsamkeiten/AnimationPlayer.play("haus_light_up")
 
 func _on_area_2d_body_exited(body):
 	if body is Player:
