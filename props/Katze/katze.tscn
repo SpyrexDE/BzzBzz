@@ -1,9 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://ofp2ksjj0qxe"]
+[gd_scene load_steps=5 format=3 uid="uid://ofp2ksjj0qxe"]
 
 [ext_resource type="Texture2D" uid="uid://bs3dite8xvbwm" path="res://KittyCat.png" id="1_1g0bt"]
+[ext_resource type="Script" path="res://props/Katze/katze.gd" id="1_go55m"]
 [ext_resource type="Texture2D" uid="uid://cq2tvojinwnb7" path="res://light.png" id="2_ip6ra"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_055vq"]
+radius = 75.8219
+height = 481.416
+
 [node name="Katze" type="StaticBody2D"]
+script = ExtResource("1_go55m")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(22.1, 40.5)
@@ -16,3 +22,12 @@ polygon = PackedVector2Array(374, 163, 447, 109, 480, 93, 498, 45, 520, 33, 560,
 [node name="PointLight2D" type="PointLight2D" parent="."]
 energy = 0.2
 texture = ExtResource("2_ip6ra")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-39, 39)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+rotation = 0.690546
+shape = SubResource("CapsuleShape2D_055vq")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
