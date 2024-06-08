@@ -16,5 +16,5 @@ texture_scale = 0.5
 shape = SubResource("CircleShape2D_5ofs2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0, 0, 0, 1)
+modulate = Color(0, 0, 0, 0.85098)
 texture = ExtResource("2_masvi")

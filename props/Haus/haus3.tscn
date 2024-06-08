@@ -56,6 +56,7 @@ position = Vector2(66.75, -13.75)
 polygon = PackedVector2Array(-176.75, -92.25, -139.75, -100.25, -74.75, -100.25, 21.25, -87.25, 25.25, 114.75, -4.75, 128.75, -74.75, 132.75, -178.75, 129.75)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_eedoo")
 }
