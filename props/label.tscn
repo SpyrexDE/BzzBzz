@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://blfekpuyeahq5"]
+
+[ext_resource type="FontFile" uid="uid://cyat7w5sb3vll" path="res://woodcutter Electric.ttf" id="1_jguky"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1vafg"]
+line_spacing = 80.0
+font = ExtResource("1_jguky")
+font_size = 316
+font_color = Color(2.5, 2.5, 1.5, 1)
+
+[node name="Label" type="Label"]
+offset_left = -123.0
+offset_top = -466.0
+offset_right = 229.0
+offset_bottom = 39.0
+text = "5"
+label_settings = SubResource("LabelSettings_1vafg")

@@ -17,6 +17,7 @@ scale = Vector2(0.835, 1)
 texture = ExtResource("3_a1o4b")
 
 [node name="PointLight2D" parent="haus_gemeinsamkeiten" index="2"]
+scale = Vector2(0.835, 1)
 texture = ExtResource("3_a1o4b")
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
