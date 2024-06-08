@@ -23,3 +23,13 @@ func _start_Zap():
 
 func game_over():
 	pass
+
+func win():
+	get_tree().change_scene_to_file("res://ui/win_menu.tscn")
+
+func _process(delta: float) -> void:
+	for child in get_children():
+		if child is Haus:
+			if not child.strom:
+				return
+	win()
