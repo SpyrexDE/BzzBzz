@@ -53,3 +53,11 @@ position = Vector2(-842, 429)
 
 [node name="Kiste" parent="." instance=ExtResource("10_4x42r")]
 position = Vector2(315, 752)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_left = -6885.0
+offset_top = -4380.0
+offset_right = 8041.0
+offset_bottom = 5771.0
+color = Color(0.0727351, 0.162606, 0.114061, 1)
