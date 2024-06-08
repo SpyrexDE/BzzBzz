@@ -13,4 +13,4 @@ midpoint = NodePath("Midpoint")
 [node name="Midpoint" type="Node2D" parent="."]
 
 [node name="Robot" parent="." instance=ExtResource("2_tge7j")]
-position = Vector2(239, 310)
+position = Vector2(556, 299)

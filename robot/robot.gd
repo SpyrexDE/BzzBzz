@@ -12,7 +12,8 @@ func _physics_process(_delta):
 
 	rotation += steering_speed * steering / friction_multiplier
 
-	velocity += Vector2(0, -speed * Input.get_action_strength("go_forward")).rotated(rotation)
+	var input = Input.get_action_strength("go_forward") - Input.get_action_strength("go_backward")
+	velocity += Vector2(0, -speed * input).rotated(rotation)
 	
 	var total_friction = friction * friction_multiplier
 	velocity = velocity / total_friction
