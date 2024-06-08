@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://blfekpuyeahq5"]
+[gd_scene load_steps=3 format=3 uid="uid://bdwx4lrmpiodp"]
 
 [ext_resource type="FontFile" uid="uid://cyat7w5sb3vll" path="res://woodcutter Electric.ttf" id="1_jguky"]
 
@@ -13,5 +13,4 @@ offset_left = -123.0
 offset_top = -466.0
 offset_right = 229.0
 offset_bottom = 39.0
-text = "5"
 label_settings = SubResource("LabelSettings_1vafg")
