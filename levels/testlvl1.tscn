@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dahxw88ts6t6k"]
+[gd_scene load_steps=10 format=3 uid="uid://dahxw88ts6t6k"]
 
 [ext_resource type="PackedScene" uid="uid://b1gg5e8kp4384" path="res://robot/robot.tscn" id="1_vcimh"]
 [ext_resource type="Script" path="res://levels/level.gd" id="1_ysstf"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://d06k0iiax55p6" path="res://props/Busch/busch.tscn" id="6_t3kf8"]
 [ext_resource type="PackedScene" uid="uid://m1f2y8cfvcd0" path="res://props/Fels/Fels.tscn" id="7_n10mv"]
 [ext_resource type="PackedScene" uid="uid://c1dxd27ews2cu" path="res://props/Hecke/hecke.tscn" id="8_udnlr"]
+[ext_resource type="PackedScene" uid="uid://dd4pjpgedovfg" path="res://props/Hinderniss_Wasser/wasser_teich.tscn" id="9_8oros"]
 
 [node name="Testlvl1" type="Node2D" node_paths=PackedStringArray("midpoint")]
 script = ExtResource("1_ysstf")
@@ -45,3 +46,6 @@ position = Vector2(724, 1176)
 
 [node name="Hecke" parent="." instance=ExtResource("8_udnlr")]
 position = Vector2(938, 955)
+
+[node name="Wasser_Teich" parent="." instance=ExtResource("9_8oros")]
+position = Vector2(-842, 429)
