@@ -12,7 +12,7 @@ var timer: Timer
 
 func _ready() -> void:
 	Globals.level = self
-	SoundEffects.play_sound(lvl_music)
+	SoundEffects.play_sound(lvl_music, 1, 0, "bgm")
 
 	timer = Timer.new()
 	timer.wait_time = 1
@@ -32,12 +32,15 @@ func _start_Zap():
 		timer.stop()
 
 func game_over():
+	SoundEffects.fade_sound(lvl_music)
 	get_tree().change_scene_to_file("res://ui/game_over_menu.tscn")
 
 func game_over_cat():
+	SoundEffects.fade_sound(lvl_music)
 	get_tree().change_scene_to_file("res://ui/game_over_menu_cat.tscn")
 
 func win():
+	SoundEffects.fade_sound(lvl_music)
 	get_tree().change_scene_to_file("res://ui/win_menu.tscn")
 
 func _process(delta: float) -> void:

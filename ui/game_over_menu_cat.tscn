@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://bbcedm2i74gyv"]
+[gd_scene load_steps=14 format=3 uid="uid://dlk5xhn2is4mf"]
 
 [ext_resource type="Script" path="res://ui/game_over_menu.gd" id="1_dvs7r"]
 [ext_resource type="Texture2D" uid="uid://k6jya6pvolt5" path="res://IMG_0143.png" id="2_2t8oh"]
+[ext_resource type="AudioStream" uid="uid://bo2st8wipi8e6" path="res://angry-cat-meow.mp3" id="2_6581v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lro78"]
 atlas = ExtResource("2_2t8oh")
@@ -122,6 +123,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_dvs7r")
+meow = ExtResource("2_6581v")
 
 [node name="label" type="TextureRect" parent="."]
 layout_mode = 0
