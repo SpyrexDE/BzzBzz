@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b1gg5e8kp4384"]
 
 [ext_resource type="Script" path="res://robot/robot.gd" id="1_qe1k2"]
-[ext_resource type="Texture2D" uid="uid://bwsxfxob8linx" path="res://robot.png" id="2_ylexb"]
+[ext_resource type="Texture2D" uid="uid://bwsxfxob8linx" path="res://robot.png" id="2_1nmmk"]
 [ext_resource type="PackedScene" uid="uid://dalopp2ns8t8d" path="res://robot/player_camera.tscn" id="3_xdevb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o10pc"]
@@ -17,7 +17,7 @@ push_force = 1.0
 
 [node name="Sprite" type="Sprite2D" parent="."]
 scale = Vector2(2.5, 2.5)
-texture = ExtResource("2_ylexb")
+texture = ExtResource("2_1nmmk")
 
 [node name="CollisionShape" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_o10pc")
