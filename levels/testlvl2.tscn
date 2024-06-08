@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://ybf3jv7g5s6b"]
+[gd_scene load_steps=9 format=3 uid="uid://ybf3jv7g5s6b"]
 
+[ext_resource type="Script" path="res://levels/level.gd" id="1_7u7sm"]
 [ext_resource type="PackedScene" uid="uid://b1gg5e8kp4384" path="res://robot/robot.tscn" id="1_qiamr"]
 [ext_resource type="PackedScene" uid="uid://cswjddao7c7gd" path="res://props/haus.tscn" id="2_lykm4"]
 [ext_resource type="PackedScene" uid="uid://dd4pjpgedovfg" path="res://props/Hinderniss_Wasser/wasser_teich.tscn" id="3_o1ddo"]
@@ -8,7 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://m1f2y8cfvcd0" path="res://props/Fels/Fels.tscn" id="6_fwqom"]
 [ext_resource type="PackedScene" uid="uid://desc5w62oyqfi" path="res://props/connector/connector.tscn" id="7_ud36q"]
 
-[node name="TestLevel2" type="Node2D"]
+[node name="TestLevel2" type="Node2D" node_paths=PackedStringArray("midpoint")]
+script = ExtResource("1_7u7sm")
+midpoint = NodePath("Midpoint")
 
 [node name="Robot" parent="." instance=ExtResource("1_qiamr")]
 unique_name_in_owner = true
