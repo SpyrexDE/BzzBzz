@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://levels/level.gd" id="1_5ux8n"]
 [ext_resource type="PackedScene" uid="uid://cswjddao7c7gd" path="res://props/haus.tscn" id="1_w7b40"]
 [ext_resource type="PackedScene" uid="uid://b1gg5e8kp4384" path="res://robot/robot.tscn" id="2_tge7j"]
-[ext_resource type="TileSet" uid="uid://birkj2kx1rnty" path="res://tileset.tres" id="4_jhdhu"]
+[ext_resource type="TileSet" uid="uid://g0f8ygs614gt" path="res://tileset.tres" id="4_jhdhu"]
 
 [node name="Testlvl3" type="Node2D" node_paths=PackedStringArray("midpoint")]
 script = ExtResource("1_5ux8n")
