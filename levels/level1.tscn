@@ -1,7 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://bxfmvi4wbpnb2"]
+[gd_scene load_steps=18 format=3 uid="uid://dwuobwmffxcj8"]
 
 [ext_resource type="Script" path="res://levels/level.gd" id="1_yagak"]
 [ext_resource type="PackedScene" uid="uid://dg7xqp2545cv6" path="res://props/Haus/haus2.tscn" id="2_ir6l7"]
+[ext_resource type="AudioStream" uid="uid://g2tiqok2f6bk" path="res://robotic-countdown-strom10.mp3" id="2_rlw1n"]
+[ext_resource type="AudioStream" uid="uid://bjutf4lf6j758" path="res://ingame.mp3" id="2_unkk1"]
 [ext_resource type="PackedScene" uid="uid://dnf1omyvi8q4q" path="res://props/Haus/haus3.tscn" id="3_ue20j"]
 [ext_resource type="PackedScene" uid="uid://b1gg5e8kp4384" path="res://robot/robot.tscn" id="4_xano1"]
 [ext_resource type="TileSet" uid="uid://g0f8ygs614gt" path="res://tileset.tres" id="5_27clj"]
@@ -13,7 +15,6 @@
 [ext_resource type="PackedScene" uid="uid://ofp2ksjj0qxe" path="res://props/Katze/katze.tscn" id="11_bgx2t"]
 [ext_resource type="PackedScene" uid="uid://soxhgdm3pl15" path="res://props/lantern/lantern.tscn" id="12_ynx8o"]
 [ext_resource type="PackedScene" uid="uid://bdwx4lrmpiodp" path="res://props/label.tscn" id="13_74eyg"]
-[ext_resource type="PackedScene" uid="uid://6qk333npept3" path="res://ui/escape_menu.tscn" id="14_e6u3j"]
 
 [sub_resource type="Environment" id="Environment_kpoq8"]
 background_mode = 3
@@ -25,6 +26,8 @@ glow_blend_mode = 1
 [node name="leveltutorial" type="Node2D" node_paths=PackedStringArray("midpoint")]
 script = ExtResource("1_yagak")
 midpoint = NodePath("Midpoint")
+lvl_music = ExtResource("2_unkk1")
+countdown_sound = ExtResource("2_rlw1n")
 start_delay = 3.0
 
 [node name="Robot" parent="." instance=ExtResource("4_xano1")]
@@ -163,5 +166,3 @@ offset_left = 240.0
 offset_top = -108.0
 offset_right = 592.0
 offset_bottom = 397.0
-
-[node name="EscapeMenu" parent="." instance=ExtResource("14_e6u3j")]

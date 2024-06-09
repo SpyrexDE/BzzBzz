@@ -13,8 +13,8 @@ var timer: Timer
 
 func _ready() -> void:
 	Globals.level = self
-	SoundEffects.play_sound(lvl_music, 1, 0, "bgm")
-	SoundEffects.play_sound_offset(countdown_sound, 5 - start_delay)
+	
+	SoundEffects.play_sound_offset(countdown_sound, 10 - start_delay, 1.1)
 
 	timer = Timer.new()
 	timer.wait_time = 1
@@ -36,6 +36,7 @@ func _start_Zap():
 		$Label.hide()
 		%Zap.activate()
 		%Pole.do_zap_animation()
+		SoundEffects.play_sound(lvl_music, 1, 0, "bgm")
 		timer.stop()
 
 func game_over():
