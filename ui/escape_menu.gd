@@ -1,10 +1,10 @@
-extends Control
+extends CanvasLayer
 
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
 		self.visible = !self.visible
-		Engine.time_scale = 0 if self.visibible else 1
+		Engine.time_scale = 0 if self.visible else 1
 
 
 func _on_stay_button_pressed() -> void:
