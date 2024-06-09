@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://buh50awh5rjib"]
+[gd_scene load_steps=10 format=3 uid="uid://buh50awh5rjib"]
 
 [ext_resource type="Script" path="res://ui/level_select.gd" id="1_sp1xy"]
+[ext_resource type="FontFile" uid="uid://cyat7w5sb3vll" path="res://woodcutter Electric.ttf" id="2_kqswm"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rvu0i"]
 load_path = "res://.godot/imported/IMG_0141.webp-5bc5dec585e961a519a3b1ae616f4cae.ctex"
@@ -22,6 +23,11 @@ load_path = "res://.godot/imported/IMG_0141.webp-5bc5dec585e961a519a3b1ae616f4ca
 [sub_resource type="AtlasTexture" id="AtlasTexture_y1vtv"]
 atlas = SubResource("CompressedTexture2D_x75lj")
 region = Rect2(394, 1094, 444, 108)
+
+[sub_resource type="LabelSettings" id="LabelSettings_uykm3"]
+font = ExtResource("2_kqswm")
+font_size = 46
+font_color = Color(1, 1, 0.180392, 1)
 
 [node name="LevelSelect" type="Control"]
 layout_mode = 3
@@ -94,9 +100,30 @@ texture_pressed = SubResource("AtlasTexture_1pf34")
 texture_hover = SubResource("AtlasTexture_y1vtv")
 stretch_mode = 5
 
+[node name="HSlider" type="HSlider" parent="."]
+modulate = Color(1, 0.882353, 0.00784314, 1)
+layout_mode = 0
+offset_left = 34.0
+offset_top = 143.0
+offset_right = 508.0
+offset_bottom = 200.0
+scale = Vector2(2.2, 2.2)
+max_value = 40.0
+value = 8.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 425.0
+offset_top = 123.0
+offset_right = 603.0
+offset_bottom = 172.0
+text = "SPEED: 8"
+label_settings = SubResource("LabelSettings_uykm3")
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="Button5" to="." method="_on_button_5_pressed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]
