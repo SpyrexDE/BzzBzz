@@ -1,7 +1,9 @@
-[gd_scene load_steps=21 format=3 uid="uid://dwuobwmffxcj8"]
+[gd_scene load_steps=23 format=3 uid="uid://dwuobwmffxcj8"]
 
 [ext_resource type="Script" path="res://levels/level.gd" id="1_3qmi2"]
 [ext_resource type="PackedScene" uid="uid://b1gg5e8kp4384" path="res://robot/robot.tscn" id="2_52owc"]
+[ext_resource type="AudioStream" uid="uid://bjutf4lf6j758" path="res://ingame.mp3" id="2_yqe11"]
+[ext_resource type="AudioStream" uid="uid://g2tiqok2f6bk" path="res://robotic-countdown-strom10.mp3" id="3_cv14a"]
 [ext_resource type="TileSet" uid="uid://g0f8ygs614gt" path="res://tileset.tres" id="4_rs0sb"]
 [ext_resource type="PackedScene" uid="uid://desc5w62oyqfi" path="res://props/connector/connector.tscn" id="5_7ebnu"]
 [ext_resource type="PackedScene" uid="uid://cswjddao7c7gd" path="res://props/Haus/haus.tscn" id="6_n513j"]
@@ -29,6 +31,8 @@ glow_blend_mode = 1
 [node name="Level" type="Node2D" node_paths=PackedStringArray("midpoint")]
 script = ExtResource("1_3qmi2")
 midpoint = NodePath("Midpoint")
+lvl_music = ExtResource("2_yqe11")
+countdown_sound = ExtResource("3_cv14a")
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(5, 5)
