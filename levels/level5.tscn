@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dt06gj2lam0hh"]
+[gd_scene load_steps=25 format=3 uid="uid://dt06gj2lam0hh"]
 
 [ext_resource type="Script" path="res://levels/level.gd" id="1_hg2m3"]
 [ext_resource type="AudioStream" uid="uid://bjutf4lf6j758" path="res://ingame.mp3" id="2_htec1"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://bdwx4lrmpiodp" path="res://props/label.tscn" id="17_l24yn"]
 [ext_resource type="PackedScene" uid="uid://soxhgdm3pl15" path="res://props/lantern/lantern.tscn" id="18_k6w6f"]
 [ext_resource type="PackedScene" uid="uid://c1dxd27ews2cu" path="res://props/Hecke/hecke.tscn" id="19_bogi4"]
+[ext_resource type="PackedScene" uid="uid://d06k0iiax55p6" path="res://props/Busch/busch.tscn" id="20_837ua"]
 
 [sub_resource type="Environment" id="Environment_amw2k"]
 background_mode = 3
@@ -175,6 +176,17 @@ rotation = 1.5708
 
 [node name="Fels2" parent="." instance=ExtResource("9_pjfec")]
 position = Vector2(3794, 789)
+
+[node name="busch" parent="." instance=ExtResource("20_837ua")]
+position = Vector2(2616, 2103)
+
+[node name="busch2" parent="." instance=ExtResource("20_837ua")]
+position = Vector2(2302, 2162)
+rotation = 1.31598
+
+[node name="busch3" parent="." instance=ExtResource("20_837ua")]
+position = Vector2(2844, -118)
+rotation = 1.31598
 
 [node name="EscapeMenu" parent="." instance=ExtResource("16_n0klp")]
 offset_left = -123.0

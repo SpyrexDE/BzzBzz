@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://u5oo5tqkirdk"]
+[gd_scene load_steps=25 format=3 uid="uid://u5oo5tqkirdk"]
 
 [ext_resource type="Script" path="res://levels/level.gd" id="1_88pta"]
 [ext_resource type="PackedScene" uid="uid://b1gg5e8kp4384" path="res://robot/robot.tscn" id="2_cod23"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://soxhgdm3pl15" path="res://props/lantern/lantern.tscn" id="17_ekquf"]
 [ext_resource type="PackedScene" uid="uid://bdwx4lrmpiodp" path="res://props/label.tscn" id="18_mj01s"]
 [ext_resource type="PackedScene" uid="uid://6qk333npept3" path="res://ui/escape_menu.tscn" id="18_u7vc1"]
+[ext_resource type="PackedScene" uid="uid://d06k0iiax55p6" path="res://props/Busch/busch.tscn" id="20_5s7nk"]
 
 [sub_resource type="Environment" id="Environment_wiax2"]
 background_mode = 3
@@ -98,7 +99,7 @@ position = Vector2(1716, -303)
 position = Vector2(-185, 2208)
 
 [node name="Fels" parent="." instance=ExtResource("9_bnu8d")]
-position = Vector2(2942, 321)
+position = Vector2(1730, -748)
 
 [node name="Hecke" parent="." instance=ExtResource("10_rr2l5")]
 position = Vector2(3703, 1766)
@@ -167,10 +168,17 @@ position = Vector2(1122, -774)
 position = Vector2(4009, 538)
 
 [node name="Lantern7" parent="." instance=ExtResource("17_ekquf")]
-position = Vector2(1744, 1979)
+position = Vector2(1723, 1993)
 
 [node name="Lantern8" parent="." instance=ExtResource("17_ekquf")]
 position = Vector2(864, 651)
+
+[node name="busch" parent="." instance=ExtResource("20_5s7nk")]
+position = Vector2(1931, 1138)
+
+[node name="busch2" parent="." instance=ExtResource("20_5s7nk")]
+position = Vector2(2045, 860)
+rotation = 1.5708
 
 [node name="EscapeMenu" parent="." instance=ExtResource("18_u7vc1")]
 offset_left = 6327.0
