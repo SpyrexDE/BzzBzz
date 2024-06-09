@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bxfmvi4wbpnb2"]
+[gd_scene load_steps=17 format=3 uid="uid://bxfmvi4wbpnb2"]
 
 [ext_resource type="Script" path="res://levels/level.gd" id="1_yagak"]
 [ext_resource type="PackedScene" uid="uid://dg7xqp2545cv6" path="res://props/Haus/haus2.tscn" id="2_ir6l7"]
@@ -12,7 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://c1dxd27ews2cu" path="res://props/Hecke/hecke.tscn" id="10_iybvb"]
 [ext_resource type="PackedScene" uid="uid://ofp2ksjj0qxe" path="res://props/Katze/katze.tscn" id="11_bgx2t"]
 [ext_resource type="PackedScene" uid="uid://soxhgdm3pl15" path="res://props/lantern/lantern.tscn" id="12_ynx8o"]
-[ext_resource type="PackedScene" uid="uid://blfekpuyeahq5" path="res://props/label.tscn" id="13_74eyg"]
+[ext_resource type="PackedScene" uid="uid://bdwx4lrmpiodp" path="res://props/label.tscn" id="13_74eyg"]
+[ext_resource type="PackedScene" uid="uid://6qk333npept3" path="res://ui/escape_menu.tscn" id="14_e6u3j"]
 
 [sub_resource type="Environment" id="Environment_kpoq8"]
 background_mode = 3
@@ -162,3 +163,5 @@ offset_left = 240.0
 offset_top = -108.0
 offset_right = 592.0
 offset_bottom = 397.0
+
+[node name="EscapeMenu" parent="." instance=ExtResource("14_e6u3j")]

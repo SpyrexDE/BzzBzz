@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dwuobwmffxcj8"]
+[gd_scene load_steps=21 format=3 uid="uid://dwuobwmffxcj8"]
 
 [ext_resource type="Script" path="res://levels/level.gd" id="1_3qmi2"]
 [ext_resource type="PackedScene" uid="uid://b1gg5e8kp4384" path="res://robot/robot.tscn" id="2_52owc"]
@@ -16,6 +16,8 @@
 [ext_resource type="PackedScene" uid="uid://blhl3st23e63b" path="res://props/kiste/kiste.tscn" id="15_edf6x"]
 [ext_resource type="PackedScene" uid="uid://c1dxd27ews2cu" path="res://props/Hecke/hecke.tscn" id="15_ep1tq"]
 [ext_resource type="PackedScene" uid="uid://soxhgdm3pl15" path="res://props/lantern/lantern.tscn" id="16_y64by"]
+[ext_resource type="PackedScene" uid="uid://bdwx4lrmpiodp" path="res://props/label.tscn" id="17_sae6l"]
+[ext_resource type="PackedScene" uid="uid://6qk333npept3" path="res://ui/escape_menu.tscn" id="18_e0bub"]
 
 [sub_resource type="Environment" id="Environment_fkbrj"]
 background_mode = 3
@@ -142,3 +144,7 @@ position = Vector2(-446, -2285)
 
 [node name="Lantern10" parent="." instance=ExtResource("16_y64by")]
 position = Vector2(-2002, -1311)
+
+[node name="Label" parent="." instance=ExtResource("17_sae6l")]
+
+[node name="EscapeMenu" parent="." instance=ExtResource("18_e0bub")]
