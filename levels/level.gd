@@ -22,9 +22,14 @@ func _ready() -> void:
 	add_child(timer)
 	timer.timeout.connect(_start_Zap)
 	timer.start()
+	
+	if $Label:
+		$Label.text = str(start_delay)
 
 func _start_Zap():
-	if start_delay > 0:
+	if not $Label:
+		return
+	if start_delay > 1:
 		start_delay -= 1
 		$Label.text = str(start_delay)
 	else:
