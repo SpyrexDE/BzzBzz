@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://bil6vgvrdovg1"]
 
 [ext_resource type="Script" path="res://ui/rules_menu.gd" id="1_7vwjd"]
-[ext_resource type="Texture2D" uid="uid://bwvm1f85gvpjw" path="res://IMG_0144.webp" id="1_jk435"]
+[ext_resource type="Texture2D" uid="uid://nw6tja7u5kq5" path="res://IMG_0144.png" id="1_jk435"]
 [ext_resource type="Texture2D" uid="uid://gc77nf4be2q6" path="res://IMG_0141.webp" id="2_k7mgw"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3s7gp"]
