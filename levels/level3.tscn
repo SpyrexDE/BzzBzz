@@ -137,37 +137,25 @@ position = Vector2(597, 1794)
 rotation = 1.70785
 
 [node name="Lantern" parent="." instance=ExtResource("16_d0crs")]
-position = Vector2(1017, 1141)
+position = Vector2(155, 1186)
 
 [node name="Lantern2" parent="." instance=ExtResource("16_d0crs")]
 position = Vector2(1944, 245)
 
 [node name="Lantern3" parent="." instance=ExtResource("16_d0crs")]
-position = Vector2(3125, -87)
+position = Vector2(4077, -392)
 
 [node name="Lantern4" parent="." instance=ExtResource("16_d0crs")]
-position = Vector2(4056, 2481)
+position = Vector2(4361, 1350)
 
 [node name="Lantern5" parent="." instance=ExtResource("16_d0crs")]
-position = Vector2(542, 2490)
+position = Vector2(1736, 2526)
 
 [node name="Lantern6" parent="." instance=ExtResource("16_d0crs")]
-position = Vector2(2067, 2476)
-
-[node name="Lantern10" parent="." instance=ExtResource("16_d0crs")]
-position = Vector2(-1950, 1196)
+position = Vector2(2642, 1542)
 
 [node name="Lantern7" parent="." instance=ExtResource("16_d0crs")]
-position = Vector2(4093, 571)
-
-[node name="Lantern8" parent="." instance=ExtResource("16_d0crs")]
-position = Vector2(-418, 1251)
-
-[node name="Lantern9" parent="." instance=ExtResource("16_d0crs")]
-position = Vector2(-957, 2488)
-
-[node name="Lantern11" parent="." instance=ExtResource("16_d0crs")]
-position = Vector2(-2005, 2480)
+position = Vector2(4321, 2485)
 
 [node name="EscapeMenu" parent="." instance=ExtResource("16_o7rdu")]
 offset_left = -2005.0
