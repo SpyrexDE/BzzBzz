@@ -1,10 +1,11 @@
-[gd_scene load_steps=20 format=3 uid="uid://df5of3d13bhab"]
+[gd_scene load_steps=21 format=3 uid="uid://df5of3d13bhab"]
 
 [ext_resource type="Texture2D" uid="uid://gc77nf4be2q6" path="res://IMG_0141.webp" id="1_n45nw"]
 [ext_resource type="Script" path="res://ui/main_menu.gd" id="1_wr28q"]
 [ext_resource type="AudioStream" uid="uid://da3eyfmtldnje" path="res://menumusic.mp3" id="2_8xd8q"]
 [ext_resource type="Texture2D" uid="uid://cj1shdifyd5k" path="res://IMG_0153.png" id="3_f5216"]
 [ext_resource type="Texture2D" uid="uid://dblk0fgyxp8h" path="res://IMG_0151.png" id="4_13s5m"]
+[ext_resource type="PackedScene" uid="uid://c3f74ep3f547i" path="res://ui/level_select_btn.tscn" id="6_dopg4"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_prkdc"]
 load_path = "res://.godot/imported/IMG_0141.webp-5bc5dec585e961a519a3b1ae616f4cae.ctex"
@@ -72,7 +73,7 @@ offset_left = 416.0
 offset_top = 349.0
 offset_right = 850.0
 offset_bottom = 454.0
-scale = Vector2(0.71, 0.71)
+scale = Vector2(0.54, 0.54)
 mouse_default_cursor_shape = 2
 texture_normal = SubResource("AtlasTexture_6th4r")
 texture_pressed = SubResource("AtlasTexture_p54jr")
@@ -83,10 +84,10 @@ stretch_mode = 6
 [node name="StartButton2" type="TextureButton" parent="."]
 layout_mode = 2
 offset_left = 416.0
-offset_top = 458.0
+offset_top = 493.0
 offset_right = 850.0
-offset_bottom = 566.0
-scale = Vector2(0.71, 0.71)
+offset_bottom = 601.0
+scale = Vector2(0.54, 0.54)
 mouse_default_cursor_shape = 2
 texture_normal = SubResource("AtlasTexture_rjcsw")
 texture_pressed = SubResource("AtlasTexture_qroyi")
@@ -103,6 +104,14 @@ texture = ExtResource("3_f5216")
 position = Vector2(879, 383)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("4_13s5m")
+
+[node name="LevelSelect" parent="." instance=ExtResource("6_dopg4")]
+layout_mode = 0
+offset_left = 418.0
+offset_top = 419.0
+offset_right = 1141.0
+offset_bottom = 593.0
+scale = Vector2(0.32, 0.32)
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="StartButton2" to="." method="_on_start_button_2_pressed"]

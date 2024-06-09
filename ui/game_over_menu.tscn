@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://cwkr4nk7asu2a"]
+[gd_scene load_steps=15 format=3 uid="uid://cwkr4nk7asu2a"]
 
 [ext_resource type="Texture2D" uid="uid://k6jya6pvolt5" path="res://IMG_0143.png" id="1_nq8nv"]
 [ext_resource type="Script" path="res://ui/game_over_menu.gd" id="1_vee7b"]
 [ext_resource type="AudioStream" uid="uid://c2hmyg06yvyqn" path="res://dead-robot-01-82175.mp3" id="2_8whui"]
+[ext_resource type="PackedScene" uid="uid://c3f74ep3f547i" path="res://ui/level_select_btn.tscn" id="4_bkpfl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lro78"]
 atlas = ExtResource("1_nq8nv")
@@ -94,14 +95,23 @@ autoplay = "flicker"
 
 [node name="BackButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 232.0
-offset_top = 340.0
-offset_right = 881.0
-offset_bottom = 499.0
+offset_left = 380.0
+offset_top = 510.0
+offset_right = 1029.0
+offset_bottom = 669.0
+scale = Vector2(0.59, 0.59)
 mouse_default_cursor_shape = 2
 texture_normal = SubResource("AtlasTexture_8eg5a")
 texture_pressed = SubResource("AtlasTexture_b7w05")
 texture_hover = SubResource("AtlasTexture_nwgja")
 stretch_mode = 5
+
+[node name="LevelSelect" parent="." instance=ExtResource("4_bkpfl")]
+layout_mode = 0
+offset_left = 298.0
+offset_top = 320.0
+offset_right = 1021.0
+offset_bottom = 494.0
+scale = Vector2(0.75, 0.75)
 
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
