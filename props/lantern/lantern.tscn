@@ -8,8 +8,8 @@
 [node name="Lantern" type="StaticBody2D"]
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-scale = Vector2(6, 6)
-energy = 0.3
+scale = Vector2(8, 8)
+energy = 0.2
 texture = ExtResource("1_voc3c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
