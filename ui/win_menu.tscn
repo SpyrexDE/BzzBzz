@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://b4l2lqwgr5fay"]
+[gd_scene load_steps=13 format=3 uid="uid://b4l2lqwgr5fay"]
 
 [ext_resource type="Texture2D" uid="uid://bg154f66gstvv" path="res://IMG_0145.png" id="1_2y6we"]
 [ext_resource type="Script" path="res://ui/win_menu.gd" id="1_io4up"]
+[ext_resource type="AudioStream" uid="uid://bhvvk0n4kiy2" path="res://singing-robot.mp3" id="2_fdupr"]
 [ext_resource type="FontFile" uid="uid://cyat7w5sb3vll" path="res://woodcutter Electric.ttf" id="3_ib3yv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7xu8p"]
@@ -73,6 +74,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_io4up")
+winsound = ExtResource("2_fdupr")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
