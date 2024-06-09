@@ -23,10 +23,14 @@ func activate():
 	%Sprite2D.visible = true
 	is_moving = true
 
-func kill():
+func kill(cat: bool=false):
 	print("dead")
 	dead = true
 	Globals.camera.add_stress(2)
+	if cat:
+		Globals.level.game_over_cat()
+	else:
+		Globals.level.game_over()
 
 func _physics_process(_delta):
 	if (dead):
