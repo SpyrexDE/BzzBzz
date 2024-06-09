@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://cwkr4nk7asu2a"]
+[gd_scene load_steps=14 format=3 uid="uid://cwkr4nk7asu2a"]
 
 [ext_resource type="Texture2D" uid="uid://k6jya6pvolt5" path="res://IMG_0143.png" id="1_nq8nv"]
 [ext_resource type="Script" path="res://ui/game_over_menu.gd" id="1_vee7b"]
+[ext_resource type="AudioStream" uid="uid://c2hmyg06yvyqn" path="res://dead-robot-01-82175.mp3" id="2_8whui"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lro78"]
 atlas = ExtResource("1_nq8nv")
@@ -74,6 +75,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vee7b")
+meow = ExtResource("2_8whui")
+pitch = 10.0
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0

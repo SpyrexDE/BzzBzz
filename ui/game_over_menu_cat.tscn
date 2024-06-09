@@ -124,6 +124,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_dvs7r")
 meow = ExtResource("2_6581v")
+pitch = 1.0
 
 [node name="label" type="TextureRect" parent="."]
 layout_mode = 0
