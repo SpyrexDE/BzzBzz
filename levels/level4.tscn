@@ -1,8 +1,10 @@
-[gd_scene load_steps=22 format=3 uid="uid://u5oo5tqkirdk"]
+[gd_scene load_steps=24 format=3 uid="uid://u5oo5tqkirdk"]
 
 [ext_resource type="Script" path="res://levels/level.gd" id="1_88pta"]
 [ext_resource type="PackedScene" uid="uid://b1gg5e8kp4384" path="res://robot/robot.tscn" id="2_cod23"]
+[ext_resource type="AudioStream" uid="uid://bjutf4lf6j758" path="res://ingame.mp3" id="2_jl3al"]
 [ext_resource type="TileSet" uid="uid://g0f8ygs614gt" path="res://tileset.tres" id="3_a16b0"]
+[ext_resource type="AudioStream" uid="uid://g2tiqok2f6bk" path="res://robotic-countdown-strom10.mp3" id="3_lep5u"]
 [ext_resource type="PackedScene" uid="uid://desc5w62oyqfi" path="res://props/connector/connector.tscn" id="4_6rbv1"]
 [ext_resource type="PackedScene" uid="uid://vqts8ef4u5h5" path="res://props/zap/zap.tscn" id="5_c4x72"]
 [ext_resource type="PackedScene" uid="uid://wt5tsi27by3d" path="res://props/pole/pole.tscn" id="6_bs37a"]
@@ -30,6 +32,8 @@ glow_blend_mode = 1
 [node name="Level" type="Node2D" node_paths=PackedStringArray("midpoint")]
 script = ExtResource("1_88pta")
 midpoint = NodePath("Midpoint")
+lvl_music = ExtResource("2_jl3al")
+countdown_sound = ExtResource("3_lep5u")
 
 [node name="Robot" parent="." instance=ExtResource("2_cod23")]
 unique_name_in_owner = true
