@@ -1,8 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://dwuobwmffxcj8"]
+[gd_scene load_steps=16 format=3 uid="uid://bxfmvi4wbpnb2"]
 
 [ext_resource type="Script" path="res://levels/level.gd" id="1_yagak"]
 [ext_resource type="PackedScene" uid="uid://dg7xqp2545cv6" path="res://props/Haus/haus2.tscn" id="2_ir6l7"]
-[ext_resource type="AudioStream" uid="uid://bjutf4lf6j758" path="res://ingame.mp3" id="2_isvaq"]
 [ext_resource type="PackedScene" uid="uid://dnf1omyvi8q4q" path="res://props/Haus/haus3.tscn" id="3_ue20j"]
 [ext_resource type="PackedScene" uid="uid://b1gg5e8kp4384" path="res://robot/robot.tscn" id="4_xano1"]
 [ext_resource type="TileSet" uid="uid://g0f8ygs614gt" path="res://tileset.tres" id="5_27clj"]
@@ -13,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://c1dxd27ews2cu" path="res://props/Hecke/hecke.tscn" id="10_iybvb"]
 [ext_resource type="PackedScene" uid="uid://ofp2ksjj0qxe" path="res://props/Katze/katze.tscn" id="11_bgx2t"]
 [ext_resource type="PackedScene" uid="uid://soxhgdm3pl15" path="res://props/lantern/lantern.tscn" id="12_ynx8o"]
-[ext_resource type="PackedScene" uid="uid://bdwx4lrmpiodp" path="res://props/label.tscn" id="13_74eyg"]
+[ext_resource type="PackedScene" uid="uid://blfekpuyeahq5" path="res://props/label.tscn" id="13_74eyg"]
 
 [sub_resource type="Environment" id="Environment_kpoq8"]
 background_mode = 3

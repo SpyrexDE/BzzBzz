@@ -22,6 +22,8 @@ func _ready() -> void:
 	timer.start()
 
 func _start_Zap():
+	if not $Label:
+		return
 	if start_delay > 0:
 		start_delay -= 1
 		$Label.text = str(start_delay)
