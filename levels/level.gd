@@ -48,6 +48,7 @@ func game_over_cat():
 	get_tree().change_scene_to_file("res://ui/game_over_menu_cat.tscn")
 
 func win():
+	await get_tree().create_timer(2.0 / (Globals.shock_speed/8)).timeout
 	SoundEffects.fade_sound(lvl_music)
 	get_tree().change_scene_to_file("res://ui/win_menu.tscn")
 
