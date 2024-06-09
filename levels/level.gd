@@ -5,6 +5,7 @@ class_name Level
 var midpoint: Node2D
 
 @export var lvl_music: AudioStreamMP3
+@export var countdown_sound: AudioStreamMP3
 
 @export var start_delay: float = 5.0
 
@@ -13,6 +14,7 @@ var timer: Timer
 func _ready() -> void:
 	Globals.level = self
 	SoundEffects.play_sound(lvl_music, 1, 0, "bgm")
+	SoundEffects.play_sound_offset(countdown_sound, 5 - start_delay)
 
 	timer = Timer.new()
 	timer.wait_time = 1
@@ -20,9 +22,14 @@ func _ready() -> void:
 	add_child(timer)
 	timer.timeout.connect(_start_Zap)
 	timer.start()
+	
+	if $Label:
+		$Label.text = str(start_delay)
 
 func _start_Zap():
-	if start_delay > 0:
+	if not $Label:
+		return
+	if start_delay > 1:
 		start_delay -= 1
 		$Label.text = str(start_delay)
 	else:
