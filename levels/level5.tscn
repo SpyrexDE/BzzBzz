@@ -165,10 +165,7 @@ position = Vector2(-2325, 2967)
 position = Vector2(7532, 2967)
 
 [node name="Hecke" parent="." instance=ExtResource("19_bogi4")]
-position = Vector2(4014, 1941)
-
-[node name="Hecke2" parent="." instance=ExtResource("19_bogi4")]
-position = Vector2(3624, 1941)
+position = Vector2(3963, 1814)
 
 [node name="Hecke3" parent="." instance=ExtResource("19_bogi4")]
 position = Vector2(674, 2407)
@@ -176,13 +173,6 @@ rotation = 1.5708
 
 [node name="Fels2" parent="." instance=ExtResource("9_pjfec")]
 position = Vector2(3794, 789)
-
-[node name="busch" parent="." instance=ExtResource("20_837ua")]
-position = Vector2(2616, 2103)
-
-[node name="busch2" parent="." instance=ExtResource("20_837ua")]
-position = Vector2(2302, 2162)
-rotation = 1.31598
 
 [node name="busch3" parent="." instance=ExtResource("20_837ua")]
 position = Vector2(2844, -118)
