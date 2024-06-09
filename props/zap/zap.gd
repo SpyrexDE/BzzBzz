@@ -33,6 +33,7 @@ func kill(cat: bool=false):
 		Globals.level.game_over()
 
 func _physics_process(_delta):
+	speed = Globals.shock_speed
 	if (dead):
 		return
 

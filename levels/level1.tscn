@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dwuobwmffxcj8"]
+[gd_scene load_steps=18 format=3 uid="uid://bxfmvi4wbpnb2"]
 
 [ext_resource type="Script" path="res://levels/level.gd" id="1_yagak"]
 [ext_resource type="PackedScene" uid="uid://dg7xqp2545cv6" path="res://props/Haus/haus2.tscn" id="2_ir6l7"]
@@ -123,43 +123,22 @@ rotation = 1.5708
 position = Vector2(2049, 131)
 
 [node name="Lantern" parent="." instance=ExtResource("12_ynx8o")]
-position = Vector2(1107, -371)
+position = Vector2(888, -400)
 
 [node name="Lantern2" parent="." instance=ExtResource("12_ynx8o")]
-position = Vector2(2769, -354)
+position = Vector2(1038, 1254)
 
 [node name="Lantern3" parent="." instance=ExtResource("12_ynx8o")]
-position = Vector2(4178, -349)
+position = Vector2(1067, 2591)
 
 [node name="Lantern4" parent="." instance=ExtResource("12_ynx8o")]
-position = Vector2(5710, -377)
+position = Vector2(2770, -367)
 
 [node name="Lantern5" parent="." instance=ExtResource("12_ynx8o")]
-position = Vector2(6988, -343)
+position = Vector2(4239, -362)
 
 [node name="Lantern6" parent="." instance=ExtResource("12_ynx8o")]
-position = Vector2(-389, -366)
-
-[node name="Lantern7" parent="." instance=ExtResource("12_ynx8o")]
-position = Vector2(-1690, -377)
-
-[node name="Lantern8" parent="." instance=ExtResource("12_ynx8o")]
-position = Vector2(-2928, -392)
-
-[node name="Lantern9" parent="." instance=ExtResource("12_ynx8o")]
-position = Vector2(-4197, -422)
-
-[node name="Lantern10" parent="." instance=ExtResource("12_ynx8o")]
-position = Vector2(893, 603)
-
-[node name="Lantern11" parent="." instance=ExtResource("12_ynx8o")]
-position = Vector2(613, 1727)
-
-[node name="Lantern12" parent="." instance=ExtResource("12_ynx8o")]
-position = Vector2(613, 2616)
-
-[node name="Lantern13" parent="." instance=ExtResource("12_ynx8o")]
-position = Vector2(594, 3670)
+position = Vector2(-874, -385)
 
 [node name="Label" parent="." instance=ExtResource("13_74eyg")]
 offset_left = 240.0
