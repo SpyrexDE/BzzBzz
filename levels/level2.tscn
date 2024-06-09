@@ -119,31 +119,19 @@ position = Vector2(1123, -1149)
 position = Vector2(-2923, -926)
 
 [node name="Lantern2" parent="." instance=ExtResource("16_y64by")]
-position = Vector2(-2515, 268)
+position = Vector2(-1954, 268)
 
 [node name="Lantern3" parent="." instance=ExtResource("16_y64by")]
-position = Vector2(-688, -1334)
+position = Vector2(-774, -1981)
 
 [node name="Lantern4" parent="." instance=ExtResource("16_y64by")]
-position = Vector2(1238, -1885)
+position = Vector2(1685, -2094)
 
 [node name="Lantern5" parent="." instance=ExtResource("16_y64by")]
-position = Vector2(1230, 275)
+position = Vector2(1696, -249)
 
 [node name="Lantern6" parent="." instance=ExtResource("16_y64by")]
-position = Vector2(-1, 283)
-
-[node name="Lantern7" parent="." instance=ExtResource("16_y64by")]
-position = Vector2(-1254, 275)
-
-[node name="Lantern8" parent="." instance=ExtResource("16_y64by")]
-position = Vector2(1215, -541)
-
-[node name="Lantern9" parent="." instance=ExtResource("16_y64by")]
-position = Vector2(-446, -2285)
-
-[node name="Lantern10" parent="." instance=ExtResource("16_y64by")]
-position = Vector2(-2002, -1311)
+position = Vector2(47, 283)
 
 [node name="Label" parent="." instance=ExtResource("17_sae6l")]
 
