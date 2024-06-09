@@ -166,5 +166,3 @@ offset_left = 240.0
 offset_top = -108.0
 offset_right = 592.0
 offset_bottom = 397.0
-
-[node name="EscapeMenu" parent="." instance=ExtResource("14_e6u3j")]
