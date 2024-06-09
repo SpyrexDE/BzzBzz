@@ -110,8 +110,12 @@ position = Vector2(1432, 599)
 [node name="Hecke3" parent="." instance=ExtResource("10_rr2l5")]
 position = Vector2(1840, 593)
 
+[node name="Hecke5" parent="." instance=ExtResource("10_rr2l5")]
+position = Vector2(2232, 593)
+
 [node name="Hecke4" parent="." instance=ExtResource("10_rr2l5")]
-position = Vector2(2240, 598)
+position = Vector2(2539, 507)
+rotation = 1.5708
 
 [node name="Katze" parent="." instance=ExtResource("11_6bsbm")]
 position = Vector2(99, 1084)
@@ -128,8 +132,18 @@ position = Vector2(-196, 859)
 [node name="Kiste" parent="." instance=ExtResource("15_n2hat")]
 position = Vector2(-221, 1578)
 
+[node name="Kiste2" parent="." instance=ExtResource("15_n2hat")]
+position = Vector2(93, 1578)
+
+[node name="Kiste3" parent="." instance=ExtResource("15_n2hat")]
+position = Vector2(449, 1585)
+
+[node name="Kiste4" parent="." instance=ExtResource("15_n2hat")]
+position = Vector2(777, 1592)
+
 [node name="Wasser_Teich" parent="." instance=ExtResource("16_rn11l")]
-position = Vector2(350, 2250)
+position = Vector2(386, 2286)
+rotation = -0.598648
 
 [node name="Wasser_Teich2" parent="." instance=ExtResource("16_rn11l")]
 position = Vector2(3170, 2206)
@@ -156,7 +170,7 @@ position = Vector2(4009, 538)
 position = Vector2(1744, 1979)
 
 [node name="Lantern8" parent="." instance=ExtResource("17_ekquf")]
-position = Vector2(871, 622)
+position = Vector2(864, 651)
 
 [node name="EscapeMenu" parent="." instance=ExtResource("18_u7vc1")]
 offset_left = 6327.0
