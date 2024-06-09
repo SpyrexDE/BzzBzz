@@ -132,7 +132,8 @@ position = Vector2(3538, 1147)
 position = Vector2(3538, 1350)
 
 [node name="Wasser_Teich" parent="." instance=ExtResource("15_qviof")]
-position = Vector2(434, 1895)
+position = Vector2(595, 1989)
+rotation = 2.99149
 
 [node name="Wasser_Teich2" parent="." instance=ExtResource("15_qviof")]
 position = Vector2(3132, 2311)
@@ -153,7 +154,7 @@ position = Vector2(4599, 806)
 position = Vector2(3260, 196)
 
 [node name="Lantern6" parent="." instance=ExtResource("18_k6w6f")]
-position = Vector2(718, 213)
+position = Vector2(659, 213)
 
 [node name="Lantern7" parent="." instance=ExtResource("18_k6w6f")]
 position = Vector2(-1902, 204)
